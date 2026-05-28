@@ -319,7 +319,7 @@ button { font: inherit; }
   animation: fadeUp 0.24s cubic-bezier(.2,.8,.2,1);
   font-weight: 650;
 }
-.stats-row {
+.progress-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -540,7 +540,7 @@ button { font: inherit; }
   .mode-selector { grid-template-columns: 1fr; }
   .actions-row { flex-direction: column; }
   .btn, .mode-btn { width: 100%; }
-  .stats-row { display: grid; grid-template-columns: 1fr 1fr; }
+  .progress-row { display: grid; grid-template-columns: 1fr 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
@@ -660,8 +660,101 @@ button { font: inherit; }
   outline: none;
 }
 .step-input:focus { box-shadow: 0 0 0 4px rgba(111,143,232,.14); border-color: rgba(111,143,232,.38); }
+
+.step-input {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.step-input::-webkit-outer-spin-button,
+.step-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 .step-value { display: flex; align-items: center; justify-content: center; padding: 0 12px; }
 .settings-note { font-size: .86rem; }
+
+.source-settings { gap: 14px; }
+.settings-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.source-options {
+  display: grid;
+  gap: 9px;
+  max-height: min(240px, 34vh);
+  overflow: auto;
+  padding-right: 2px;
+}
+.source-choice {
+  width: 100%;
+  border: 1px solid rgba(124,152,192,.16);
+  border-radius: 17px;
+  background: rgba(255,255,255,.74);
+  color: var(--text);
+  padding: 11px 12px;
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+}
+.source-choice:hover {
+  transform: translateY(-1px);
+  border-color: rgba(111,143,232,.36);
+  box-shadow: 0 12px 24px rgba(125,143,177,.1);
+}
+.source-choice.active {
+  background: linear-gradient(180deg, rgba(238,243,255,.98), rgba(255,255,255,.86));
+  border-color: rgba(111,143,232,.34);
+}
+.source-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  background: rgba(232,238,252,.96);
+  color: transparent;
+  font-weight: 900;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+.source-choice.active .source-check {
+  color: #fff;
+  background: linear-gradient(180deg, #6f8fe8, #5c7fdf);
+}
+.source-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 720;
+}
+.source-count {
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(239,244,255,.96);
+  color: var(--text-soft);
+  font-size: .78rem;
+  font-weight: 760;
+}
+.source-choice.active .source-count { color: var(--accent-strong); }
+.mini-link {
+  border: 0;
+  border-radius: 999px;
+  padding: 7px 10px;
+  background: rgba(239,244,255,.92);
+  color: var(--accent-strong);
+  font-size: .82rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform .18s ease, background .18s ease;
+}
+.mini-link:hover { transform: translateY(-1px); background: #fff; }
+
 .loading-frame { min-height: 360px; justify-items: center; align-content: center; text-align: center; }
 .loader {
   width: 42px;
@@ -734,6 +827,7 @@ button { font: inherit; }
   let MODES = FALLBACK_MODES.slice();
   let MODE_LABELS = Object.fromEntries(MODES.map(mode => [mode.key, mode.label]));
   let MODE_TEMA = Object.fromEntries(MODES.filter(mode => mode.tema != null).map(mode => [mode.key, mode.tema]));
+  let SOURCE_NAMES = [];
 
   const storage = (() => {
     try {
@@ -787,15 +881,16 @@ button { font: inherit; }
   }
 
   function loadSettings() {
-    if (!storage) return { ...DEFAULT_SETTINGS };
+    if (!storage) return { ...DEFAULT_SETTINGS, enabledSources: null };
     try {
       const saved = JSON.parse(storage.getItem("quizTrainerSettings") || "{}");
       return {
         questionCount: clampNumber(saved.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount),
-        penaltyEvery: clampNumber(saved.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery)
+        penaltyEvery: clampNumber(saved.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery),
+        enabledSources: Array.isArray(saved.enabledSources) ? saved.enabledSources.slice() : null
       };
     } catch (_) {
-      return { ...DEFAULT_SETTINGS };
+      return { ...DEFAULT_SETTINGS, enabledSources: null };
     }
   }
 
@@ -804,7 +899,8 @@ button { font: inherit; }
     try {
       storage.setItem("quizTrainerSettings", JSON.stringify({
         questionCount: normalizedQuestionCount(),
-        penaltyEvery: normalizedPenaltyEvery()
+        penaltyEvery: normalizedPenaltyEvery(),
+        enabledSources: Array.isArray(state.settings.enabledSources) ? state.settings.enabledSources.slice() : null
       }));
     } catch (_) {}
   }
@@ -824,6 +920,17 @@ button { font: inherit; }
     MODE_LABELS = Object.fromEntries(MODES.map(mode => [mode.key, mode.label]));
     MODE_TEMA = Object.fromEntries(MODES.filter(mode => mode.tema != null).map(mode => [mode.key, mode.tema]));
     QUESTIONS = Array.isArray(bank.questions) ? bank.questions : [];
+    SOURCE_NAMES = Array.from(new Set(QUESTIONS.map(questionSourceName).filter(Boolean)))
+      .sort((a, b) => a.localeCompare(b, "es", { sensitivity: "base" }));
+    if (Array.isArray(state.settings.enabledSources)) {
+      const previousEnabledSources = state.settings.enabledSources.slice();
+      state.settings.enabledSources = state.settings.enabledSources.filter(source => SOURCE_NAMES.includes(source));
+      if (previousEnabledSources.length > 0 && state.settings.enabledSources.length === 0) {
+        state.settings.enabledSources = SOURCE_NAMES.slice();
+      }
+    } else {
+      state.settings.enabledSources = SOURCE_NAMES.slice();
+    }
     DATA_META = bank.meta || {};
     DATA_META.total = QUESTIONS.length;
     DATA_META.trusted = QUESTIONS.filter(q => q.trusted === true).length;
@@ -883,8 +990,40 @@ button { font: inherit; }
     return result;
   }
 
+  function questionSourceName(q) {
+    const raw = String(q?.sourceRef || "").trim();
+    const first = raw.split(" · ")[0]?.trim();
+    return first || "Fuente no especificada";
+  }
+
+  function enabledSourcesSet() {
+    const selected = Array.isArray(state.settings.enabledSources) ? state.settings.enabledSources : SOURCE_NAMES;
+    return new Set(selected);
+  }
+
+  function sourceIsEnabled(sourceName) {
+    return enabledSourcesSet().has(sourceName);
+  }
+
+  function filterByEnabledSources(questions) {
+    if (!SOURCE_NAMES.length) return questions;
+    const enabled = enabledSourcesSet();
+    return questions.filter(q => enabled.has(questionSourceName(q)));
+  }
+
+  function sourceCounts() {
+    const counts = Object.fromEntries(SOURCE_NAMES.map(source => [source, 0]));
+    for (const q of QUESTIONS) {
+      if (q.trusted === true && LETTERS.includes(q.correctKey)) {
+        const source = questionSourceName(q);
+        counts[source] = (counts[source] || 0) + 1;
+      }
+    }
+    return counts;
+  }
+
   function trustedPool() {
-    return uniqueByQuestionText(QUESTIONS.filter(q => q.trusted === true && LETTERS.includes(q.correctKey)));
+    return uniqueByQuestionText(filterByEnabledSources(QUESTIONS).filter(q => q.trusted === true && LETTERS.includes(q.correctKey)));
   }
 
   function poolForMode(mode) {
@@ -1113,6 +1252,31 @@ button { font: inherit; }
     `;
   }
 
+
+  function renderSourceSettings() {
+    if (!SOURCE_NAMES.length) return "";
+    const counts = sourceCounts();
+    const totalActive = SOURCE_NAMES.filter(source => sourceIsEnabled(source)).length;
+    return `
+          <div class="settings-item source-settings">
+            <div class="settings-label-row">
+              <div class="settings-label">Fuentes de preguntas</div>
+              <button class="mini-link" data-action="sources-all" type="button">Todas</button>
+            </div>
+            <div class="source-options" aria-label="Fuentes activas">
+              ${SOURCE_NAMES.map(source => `
+                <button class="source-choice ${sourceIsEnabled(source) ? "active" : ""}" data-source-toggle="${escapeHtml(source)}" type="button" aria-pressed="${sourceIsEnabled(source) ? "true" : "false"}">
+                  <span class="source-check">✓</span>
+                  <span class="source-name">${escapeHtml(source)}</span>
+                  <span class="source-count">${counts[source] || 0}</span>
+                </button>
+              `).join("")}
+            </div>
+            <p class="settings-note">Activas: ${totalActive}/${SOURCE_NAMES.length}. Al cambiar una fuente se genera un nuevo test con el filtro aplicado.</p>
+          </div>
+    `;
+  }
+
   function renderSettingsModal() {
     if (!state.settingsOpen) return "";
     return `
@@ -1121,14 +1285,14 @@ button { font: inherit; }
         <button class="modal-close" data-action="close-settings" type="button" aria-label="Cerrar opciones">×</button>
         <div>
           <h2 id="settingsTitle">Opciones</h2>
-          <p>Ajustes del test. Se aplican al crear un nuevo test y al cálculo de la nota final.</p>
+          <p>Ajustes del test, fuentes activas y cálculo de la nota final.</p>
         </div>
         <div class="settings-list">
           <div class="settings-item">
             <div class="settings-label">Nº de preguntas por test</div>
             <div class="stepper">
               <button class="step-btn" data-setting-step="questionCount" data-delta="-1" type="button" aria-label="Reducir preguntas">−</button>
-              <input class="step-input" data-setting-input="questionCount" type="number" min="1" max="200" value="${normalizedQuestionCount()}" inputmode="numeric" aria-label="Número de preguntas por test">
+              <input class="step-input" data-setting-input="questionCount" type="text" pattern="[0-9]*" value="${normalizedQuestionCount()}" inputmode="numeric" autocomplete="off" aria-label="Número de preguntas por test">
               <button class="step-btn" data-setting-step="questionCount" data-delta="1" type="button" aria-label="Aumentar preguntas">+</button>
             </div>
             <p class="settings-note">Si un tema no tiene suficientes preguntas, el programa avisará antes de iniciar ese test.</p>
@@ -1142,6 +1306,7 @@ button { font: inherit; }
             </div>
             <p class="settings-note">Fórmula: nota = correctas − incorrectas / ${normalizedPenaltyEvery()}, normalizada sobre 10.</p>
           </div>
+          ${renderSourceSettings()}
         </div>
       </section>
     `;
@@ -1163,7 +1328,7 @@ button { font: inherit; }
     const total = currentTestSize();
     const qNum = state.finished ? total : Math.min(state.currentIndex + 1, total);
     return `
-      <div class="stats-row" aria-live="polite">
+      <div class="progress-row" aria-live="polite">
         <div class="stat-chip"><span class="stat-label">Pregunta</span><span class="stat-value">${qNum}/${total}</span></div>
         <div class="stat-chip"><span class="stat-label">Correctas</span><span class="stat-value">${state.correct}</span></div>
         <div class="stat-chip"><span class="stat-label">Incorrectas</span><span class="stat-value">${state.wrong}</span></div>
@@ -1191,7 +1356,7 @@ button { font: inherit; }
   }
 
   function sourceLabel(q) {
-    return q.sourceRef || q.source || "Fuente no especificada";
+    return q.sourceRef || "Fuente no especificada";
   }
 
   function renderQuiz() {
@@ -1281,20 +1446,12 @@ button { font: inherit; }
   }
 
   function renderError(message) {
-    const validation = validateData();
-    const counts = validation.counts || {};
+    const details = String(message || state.error || "Error de validación");
     return `
       <main class="view">
         <section class="frame error-card">
           <h1>No se puede iniciar el test</h1>
-          <div class="feedback is-wrong">${escapeHtml(message || state.error || "Error de validación")}</div>
-          <pre>${escapeHtml(validation.problems.join("\n") || "Sin detalles adicionales.")}</pre>
-          <div class="stats-row">
-            <div class="stat-chip"><span class="stat-label">Únicas</span><span class="stat-value">${DATA_META.total || QUESTIONS.length}</span></div>
-            <div class="stat-chip"><span class="stat-label">Fiables</span><span class="stat-value">${DATA_META.trusted || 0}</span></div>
-            <div class="stat-chip"><span class="stat-label">No fiables</span><span class="stat-value">${DATA_META.untrusted || 0}</span></div>
-            ${MODES.map(mode => `<div class="stat-chip"><span class="stat-label">${escapeHtml(mode.label)}</span><span class="stat-value">${counts[mode.key] || 0}</span></div>`).join("")}
-          </div>
+          <div class="feedback is-wrong">${escapeHtml(details)}</div>
           <div class="actions-row">
             <button class="btn btn-primary" data-action="new" type="button">Reintentar</button>
           </div>
@@ -1341,10 +1498,41 @@ button { font: inherit; }
     render();
   }
 
+
+  function resetCycles() {
+    state.cycleUsed = Object.fromEntries(MODES.map(mode => [mode.key, new Set()]));
+  }
+
+  function applySourceFilterChange() {
+    saveSettings();
+    resetCycles();
+    if (!state.loading) startNewTest(state.selectedMode);
+    else render();
+  }
+
+  function toggleSource(sourceName) {
+    if (!SOURCE_NAMES.includes(sourceName)) return;
+    const enabled = enabledSourcesSet();
+    if (enabled.has(sourceName)) enabled.delete(sourceName);
+    else enabled.add(sourceName);
+    state.settings.enabledSources = SOURCE_NAMES.filter(source => enabled.has(source));
+    applySourceFilterChange();
+  }
+
+  function enableAllSources() {
+    state.settings.enabledSources = SOURCE_NAMES.slice();
+    applySourceFilterChange();
+  }
+
   document.getElementById("app").addEventListener("click", (event) => {
     const settingsStep = event.target.closest("[data-setting-step]");
     if (settingsStep) {
       changeSetting(settingsStep.dataset.settingStep, Number(settingsStep.dataset.delta || 0));
+      return;
+    }
+    const sourceToggle = event.target.closest("[data-source-toggle]");
+    if (sourceToggle) {
+      toggleSource(sourceToggle.dataset.sourceToggle);
       return;
     }
     const modeButton = event.target.closest("[data-mode]");
@@ -1369,6 +1557,7 @@ button { font: inherit; }
     if (!action) return;
     switch (action.dataset.action) {
       case "new": startNewTest(state.selectedMode); break;
+      case "sources-all": enableAllSources(); break;
       case "open-settings": state.settingsOpen = true; render(); break;
       case "close-settings": state.settingsOpen = false; render(); break;
     }
