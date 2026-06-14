@@ -585,6 +585,9 @@ button { font: inherit; }
   .actions-row { flex-direction: column; }
   .btn, .mode-btn { width: 100%; }
   .progress-row { display: grid; grid-template-columns: 1fr 1fr; }
+  /* En móvil, una asignatura debajo de otra para tocarlas más fácil */
+  .subject-switch { flex-direction: column; overflow-x: visible; border-radius: 18px; }
+  .subject-chip { justify-content: flex-start; width: 100%; padding: 13px 16px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
