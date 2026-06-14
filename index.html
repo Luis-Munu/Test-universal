@@ -361,6 +361,15 @@ button { font: inherit; }
   display: grid;
   gap: 10px;
 }
+.subject-switch-label {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--muted, #6b7280);
+  text-align: center;
+  margin-bottom: 2px;
+}
 .subject-switch {
   display: flex;
   gap: 6px;
@@ -1608,6 +1617,7 @@ button { font: inherit; }
   function renderSubjectSwitch() {
     if (!Array.isArray(SUBJECTS) || SUBJECTS.length < 2) return "";
     return `
+      <div class="subject-switch-label">Selección de asignatura</div>
       <div class="subject-switch" role="tablist" aria-label="Asignatura">
         ${SUBJECTS.map(subject => `
           <button class="subject-chip ${subject.key === CURRENT_SUBJECT ? "active" : ""}" data-subject="${escapeHtml(subject.key)}" type="button" role="tab" aria-selected="${subject.key === CURRENT_SUBJECT ? "true" : "false"}">
