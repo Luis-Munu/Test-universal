@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Test Matemáticas VIU</title>
+  <title>Test Master</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%22%20stop-color%3D%22%236f8fe8%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%221%22%20stop-color%3D%22%238fd7c8%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2216%22%20fill%3D%22url%28%23g%29%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M19%2016h29v8H32.5l9.6%208-9.6%208H49v8H19v-7.2L29.4%2032%2019%2023.2z%22%20fill%3D%22%23fff%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%2249%22%20cy%3D%2217%22%20r%3D%225%22%20fill%3D%22%23fff%22%20opacity%3D%22.78%22%2F%3E%0A%3C%2Fsvg%3E">
   <meta name="theme-color" content="#6f8fe8">
   <style>
@@ -219,9 +219,13 @@ button { font: inherit; }
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(112px, 1fr));
+  grid-auto-rows: minmax(96px, 1fr);
   gap: clamp(10px, 1.5vh, 14px);
 }
+/* A lone third option spans the full width so the layout stays balanced. */
+.answers[data-count="3"] .answer:nth-child(3) { grid-column: 1 / -1; }
+/* Two options sit side by side; single-option edge case fills the row. */
+.answers[data-count="1"] { grid-template-columns: 1fr; }
 .answer {
   min-width: 0;
   min-height: 0;
@@ -353,9 +357,49 @@ button { font: inherit; }
   justify-content: center;
   gap: 10px;
 }
+.selector-stack {
+  display: grid;
+  gap: 10px;
+}
+.subject-switch {
+  display: flex;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 999px;
+  background: rgba(237, 242, 255, 0.7);
+  border: 1px solid var(--line);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.subject-switch::-webkit-scrollbar { display: none; }
+.subject-chip {
+  flex: 1 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-soft);
+  font-weight: 760;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.26s cubic-bezier(.2,.8,.2,1), color 0.22s ease, box-shadow 0.22s ease, transform 0.18s ease;
+}
+.subject-chip:hover { color: var(--text); transform: translateY(-1px); }
+.subject-chip.active {
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+  color: var(--accent-strong);
+  box-shadow: 0 10px 22px rgba(95, 126, 223, 0.18), inset 0 0 0 1px rgba(111, 143, 232, 0.18);
+}
+.subject-emoji { font-size: 1.06rem; line-height: 1; }
 .mode-selector {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 10px;
 }
 .btn,
@@ -807,8 +851,19 @@ button { font: inherit; }
 
   "use strict";
 
-  const BANK_URL = new URLSearchParams(window.location.search).get("bank") || "questions.json";
-  const LETTERS = ["A", "B", "C", "D"];
+  const BANK_OVERRIDE = new URLSearchParams(window.location.search).get("bank");
+  let BANK_URL = BANK_OVERRIDE || "questions.json";
+  const SUBJECTS_URL = "subjects.json";
+  const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
+  const STORE_KEYS = {
+    settings: "quizTrainerSettingsV2",
+    legacySettings: "quizTrainerSettings",
+    lastSubject: "quizTrainerLastSubject",
+    best: "quizTrainerBestScoresV2",
+    legacyBest: "matematicasQuizBestScores"
+  };
+  let SUBJECTS = [];
+  let CURRENT_SUBJECT = null;
   const FALLBACK_MODES = [
     { key: "general", label: "General", tema: null },
     { key: "tema1", label: "Tema 1", tema: 1 },
@@ -859,7 +914,7 @@ button { font: inherit; }
     finished: false,
     loading: true,
     settingsOpen: false,
-    settings: loadSettings()
+    settings: defaultSettings()
   };
 
   function clampNumber(value, min, max, fallback) {
@@ -880,28 +935,91 @@ button { font: inherit; }
     return state.currentTest.length || normalizedQuestionCount();
   }
 
-  function loadSettings() {
-    if (!storage) return { ...DEFAULT_SETTINGS, enabledSources: null };
+  function readJSON(key, fallback) {
+    if (!storage) return fallback;
     try {
-      const saved = JSON.parse(storage.getItem("quizTrainerSettings") || "{}");
-      return {
-        questionCount: clampNumber(saved.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount),
-        penaltyEvery: clampNumber(saved.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery),
-        enabledSources: Array.isArray(saved.enabledSources) ? saved.enabledSources.slice() : null
-      };
+      const raw = storage.getItem(key);
+      return raw ? JSON.parse(raw) : fallback;
     } catch (_) {
-      return { ...DEFAULT_SETTINGS, enabledSources: null };
+      return fallback;
     }
   }
 
+  function defaultSettings() {
+    return {
+      questionCount: DEFAULT_SETTINGS.questionCount,
+      penaltyEvery: DEFAULT_SETTINGS.penaltyEvery,
+      enabledSources: null,
+      selectedMode: "general"
+    };
+  }
+
+  // A question is usable as long as its declared correctKey resolves to one of
+  // its own options and there are at least two options. Option count is NOT
+  // forced to four, so 3-option (or other) questions load fine.
+  function correctKeyValid(q) {
+    return Array.isArray(q.options) && q.options.length >= 2 && q.options.some(o => o && o.key === q.correctKey);
+  }
+
+  function allSettings() {
+    const raw = readJSON(STORE_KEYS.settings, null);
+    return (raw && typeof raw === "object") ? raw : {};
+  }
+
+  function hasSavedSettings(subjectKey) {
+    const all = allSettings();
+    return !!(all && all[subjectKey]);
+  }
+
+  function loadSettings(subjectKey) {
+    const saved = allSettings()[subjectKey] || {};
+    return {
+      questionCount: clampNumber(saved.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount),
+      penaltyEvery: clampNumber(saved.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery),
+      enabledSources: Array.isArray(saved.enabledSources) ? saved.enabledSources.slice() : null,
+      selectedMode: typeof saved.selectedMode === "string" ? saved.selectedMode : "general"
+    };
+  }
+
   function saveSettings() {
-    if (!storage) return;
+    if (!storage || !CURRENT_SUBJECT) return;
     try {
-      storage.setItem("quizTrainerSettings", JSON.stringify({
+      const all = allSettings();
+      all[CURRENT_SUBJECT] = {
         questionCount: normalizedQuestionCount(),
         penaltyEvery: normalizedPenaltyEvery(),
-        enabledSources: Array.isArray(state.settings.enabledSources) ? state.settings.enabledSources.slice() : null
-      }));
+        enabledSources: Array.isArray(state.settings.enabledSources) ? state.settings.enabledSources.slice() : null,
+        selectedMode: state.selectedMode
+      };
+      storage.setItem(STORE_KEYS.settings, JSON.stringify(all));
+    } catch (_) {}
+  }
+
+  // One-time migration from the previous single-subject storage layout.
+  function migrateLegacy(defaultSubjectKey) {
+    if (!storage) return;
+    try {
+      if (!storage.getItem(STORE_KEYS.settings)) {
+        const legacy = readJSON(STORE_KEYS.legacySettings, null);
+        if (legacy && typeof legacy === "object") {
+          const map = {};
+          map[defaultSubjectKey] = {
+            questionCount: legacy.questionCount,
+            penaltyEvery: legacy.penaltyEvery,
+            enabledSources: Array.isArray(legacy.enabledSources) ? legacy.enabledSources : null,
+            selectedMode: "general"
+          };
+          storage.setItem(STORE_KEYS.settings, JSON.stringify(map));
+        }
+      }
+      if (!storage.getItem(STORE_KEYS.best)) {
+        const legacyBest = readJSON(STORE_KEYS.legacyBest, null);
+        if (legacyBest && typeof legacyBest === "object") {
+          const map = {};
+          map[defaultSubjectKey] = legacyBest;
+          storage.setItem(STORE_KEYS.best, JSON.stringify(map));
+        }
+      }
     } catch (_) {}
   }
 
@@ -909,13 +1027,6 @@ button { font: inherit; }
     const title = bank.title || bank.questionBankName || "Test";
     APP_TITLE = title;
     document.title = title;
-    if (bank.defaultSettings) {
-      if (!storage || !storage.getItem("quizTrainerSettings")) {
-        state.settings.questionCount = clampNumber(bank.defaultSettings.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
-        state.settings.penaltyEvery = clampNumber(bank.defaultSettings.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery);
-        saveSettings();
-      }
-    }
     MODES = Array.isArray(bank.modes) && bank.modes.length ? bank.modes : FALLBACK_MODES.slice();
     MODE_LABELS = Object.fromEntries(MODES.map(mode => [mode.key, mode.label]));
     MODE_TEMA = Object.fromEntries(MODES.filter(mode => mode.tema != null).map(mode => [mode.key, mode.tema]));
@@ -939,15 +1050,139 @@ button { font: inherit; }
     if (!MODE_LABELS[state.selectedMode]) state.selectedMode = MODES[0]?.key || "general";
   }
 
-  async function loadBank() {
+  async function fetchJSON(url) {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return response.json();
+  }
+
+  function normalizeSubjects(list) {
+    return (Array.isArray(list) ? list : [])
+      .filter(s => s && typeof s.key === "string" && typeof s.bank === "string")
+      .map(s => ({ key: s.key, label: s.label || s.key, icon: s.icon || "", bank: s.bank }));
+  }
+
+  // Everything lives in one human-friendly file (questions.json). Its layers are
+  // subjects -> temas -> questions, where each question is simply
+  // { question, options:[...strings], correct, tema? }. We normalize that easy
+  // authoring format into the internal shape the rest of the app uses.
+  const DATA_FILE = BANK_OVERRIDE || "questions.json";
+  let DATA = null;
+
+  // Resolve the "correct" field, which may be a letter (A), a 1-based number (1),
+  // a 0-based index, or the exact option text. Returns the matching option key.
+  function resolveCorrect(value, options) {
+    if (value == null) return null;
+    if (typeof value === "number" && Number.isFinite(value)) {
+      if (options[value - 1]) return options[value - 1].key; // 1-based (natural)
+      if (options[value]) return options[value].key;          // 0-based fallback
+      return null;
+    }
+    const s = String(value).trim();
+    const norm = t => String(t).trim().toLowerCase();
+    const byKey = options.find(o => o.key.toLowerCase() === s.toLowerCase());
+    if (byKey) return byKey.key;
+    const byText = options.find(o => norm(o.text) === norm(s));
+    if (byText) return byText.key;
+    if (/^\d+$/.test(s)) return resolveCorrect(parseInt(s, 10), options);
+    return null;
+  }
+
+  // Normalize one authored question. Accepts options as plain strings or as
+  // {key,text} objects. Returns null for anything too broken to use.
+  function normalizeAuthoredQuestion(q, subjectKey, i) {
+    if (!q || !q.question) return null;
+    const rawOpts = Array.isArray(q.options) ? q.options : [];
+    const options = rawOpts.map((o, k) => {
+      const text = (o && typeof o === "object") ? String(o.text != null ? o.text : "") : String(o);
+      const key = (o && typeof o === "object" && o.key != null) ? String(o.key) : (LETTERS[k] || String(k + 1));
+      return { key, text: text.trim() };
+    }).filter(o => o.text !== "");
+    if (options.length < 2) return null;
+    const correctKey = resolveCorrect(q.correct != null ? q.correct : q.correctKey, options);
+    if (correctKey == null) return null;
+    return {
+      id: q.id || (subjectKey + "-" + (i + 1)),
+      tema: (q.tema != null && q.tema !== "") ? String(q.tema) : null,
+      question: String(q.question),
+      options,
+      correctKey,
+      trusted: q.trusted !== false,
+      sourceRef: q.source || q.sourceRef || ""
+    };
+  }
+
+  // Turn a subject entry into the internal bank object applyBank() expects.
+  function normalizeBank(subject) {
+    const temas = Array.isArray(subject.temas) ? subject.temas : [];
+    const modes = [{ key: "general", label: "General", tema: null }].concat(
+      temas.map(t => {
+        const label = (t && typeof t === "object") ? String(t.label || t.key) : String(t);
+        const key = (t && typeof t === "object" && t.key != null) ? String(t.key) : label;
+        return { key, label, tema: key };
+      })
+    );
+    const questions = (Array.isArray(subject.questions) ? subject.questions : [])
+      .map((q, i) => normalizeAuthoredQuestion(q, subject.key, i))
+      .filter(Boolean);
+    return {
+      title: subject.label || subject.key,
+      questionBankName: subject.label || subject.key,
+      defaultSettings: subject.defaultSettings || (DATA && DATA.defaultSettings) || DEFAULT_SETTINGS,
+      modes,
+      meta: subject.meta || {},
+      questions
+    };
+  }
+
+  async function getBank(subject) {
+    const entry = (DATA && Array.isArray(DATA.subjects)) ? DATA.subjects.find(s => s.key === subject.key) : null;
+    if (!entry) throw new Error("Asignatura no encontrada: " + subject.key);
+    return normalizeBank(entry);
+  }
+
+  // Load the single data file and list its subjects.
+  async function loadSubjects() {
+    DATA = await fetchJSON(DATA_FILE);
+    if (DATA && DATA.appTitle) document.title = DATA.appTitle;
+    const subs = normalizeSubjects((DATA.subjects || []).map(s => ({ key: s.key, label: s.label, icon: s.icon, bank: DATA_FILE })));
+    if (!subs.length) throw new Error("El archivo no contiene asignaturas.");
+    return subs;
+  }
+
+  function subjectByKey(key) {
+    return SUBJECTS.find(s => s.key === key) || SUBJECTS[0];
+  }
+
+  function resolveInitialSubject() {
+    const last = storage ? storage.getItem(STORE_KEYS.lastSubject) : null;
+    if (last && SUBJECTS.some(s => s.key === last)) return last;
+    return SUBJECTS[0].key;
+  }
+
+  async function activateSubject(subjectKey) {
+    const subject = subjectByKey(subjectKey);
+    CURRENT_SUBJECT = subject.key;
+    BANK_URL = subject.bank;
+    if (storage) {
+      try { storage.setItem(STORE_KEYS.lastSubject, subject.key); } catch (_) {}
+    }
+    const seeded = hasSavedSettings(subject.key);
+    state.settings = loadSettings(subject.key);
+    state.selectedMode = state.settings.selectedMode || "general";
     state.loading = true;
     state.error = null;
+    stopTimer();
     render();
     try {
-      const response = await fetch(BANK_URL, { cache: "no-store" });
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
-      const bank = await response.json();
+      const bank = await getBank(subject);
+      // First time we open a subject, seed its defaults from the bank file.
+      if (!seeded && bank.defaultSettings) {
+        state.settings.questionCount = clampNumber(bank.defaultSettings.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
+        state.settings.penaltyEvery = clampNumber(bank.defaultSettings.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery);
+      }
       applyBank(bank);
+      saveSettings();
       const validation = validateData();
       state.loading = false;
       if (!validation.ok) {
@@ -959,9 +1194,30 @@ button { font: inherit; }
     } catch (error) {
       stopTimer();
       state.loading = false;
-      state.error = `No se ha podido cargar ${BANK_URL}. Sube index.html y questions.json en la misma carpeta de GitHub Pages. Detalle: ${error.message}`;
+      state.error = `No se ha podido cargar "${subject.label}" (${subject.bank}). Sube index.html y los archivos .json a la misma carpeta de GitHub Pages. Detalle: ${error.message}`;
       render();
     }
+  }
+
+  function switchSubject(subjectKey) {
+    if (!subjectKey || subjectKey === CURRENT_SUBJECT) return;
+    saveSettings();
+    activateSubject(subjectKey);
+  }
+
+  async function init() {
+    try {
+      SUBJECTS = await loadSubjects();
+    } catch (error) {
+      state.loading = false;
+      state.error = `No se ha podido cargar ${DATA_FILE}. En tu ordenador ábrelo con un servidor local (p. ej. "python -m http.server") o súbelo a GitHub Pages. Detalle: ${error.message}`;
+      render();
+      return;
+    }
+    const defaultSubject = SUBJECTS.find(s => s.key === "matematicas") || SUBJECTS[0];
+    migrateLegacy(defaultSubject.key);
+    state.bestScores = loadBestScores();
+    await activateSubject(resolveInitialSubject());
   }
 
   function normalizeQuestion(text) {
@@ -1014,7 +1270,7 @@ button { font: inherit; }
   function sourceCounts() {
     const counts = Object.fromEntries(SOURCE_NAMES.map(source => [source, 0]));
     for (const q of QUESTIONS) {
-      if (q.trusted === true && LETTERS.includes(q.correctKey)) {
+      if (q.trusted === true && correctKeyValid(q)) {
         const source = questionSourceName(q);
         counts[source] = (counts[source] || 0) + 1;
       }
@@ -1023,7 +1279,7 @@ button { font: inherit; }
   }
 
   function trustedPool() {
-    return uniqueByQuestionText(filterByEnabledSources(QUESTIONS).filter(q => q.trusted === true && LETTERS.includes(q.correctKey)));
+    return uniqueByQuestionText(filterByEnabledSources(QUESTIONS).filter(q => q.trusted === true && correctKeyValid(q)));
   }
 
   function poolForMode(mode) {
@@ -1101,7 +1357,7 @@ button { font: inherit; }
       return;
     }
     const q = state.currentTest[state.currentIndex];
-    if (!q || !LETTERS.includes(key)) return;
+    if (!q || !q.options.some(o => o.key === key)) return;
     const isCorrect = key === q.correctKey;
     state.answered = true;
     state.selectedKey = key;
@@ -1200,46 +1456,54 @@ button { font: inherit; }
   }
 
   function loadBestScores() {
-    if (!storage) return {};
-    try {
-      return JSON.parse(storage.getItem("matematicasQuizBestScores") || "{}") || {};
-    } catch (_) {
-      return {};
-    }
+    const raw = readJSON(STORE_KEYS.best, {});
+    return (raw && typeof raw === "object") ? raw : {};
   }
 
   function saveBestScores() {
     if (!storage) return;
     try {
-      storage.setItem("matematicasQuizBestScores", JSON.stringify(state.bestScores));
+      storage.setItem(STORE_KEYS.best, JSON.stringify(state.bestScores));
     } catch (_) {}
+  }
+
+  function subjectBest() {
+    const key = CURRENT_SUBJECT || "default";
+    if (!state.bestScores[key] || typeof state.bestScores[key] !== "object") state.bestScores[key] = {};
+    return state.bestScores[key];
   }
 
   function updateBestScore() {
     const mode = state.selectedMode;
     const stats = gradeStats();
     const current = { grade: stats.grade, score: state.score, total: stats.total, time: state.elapsed, date: new Date().toISOString() };
-    const previous = state.bestScores[mode];
+    const best = subjectBest();
+    const previous = best[mode];
     if (!previous || current.grade > previous.grade || (current.grade === previous.grade && current.time < previous.time)) {
-      state.bestScores[mode] = current;
+      best[mode] = current;
       saveBestScores();
     }
   }
 
   function bestLabel(mode = state.selectedMode) {
-    const best = state.bestScores[mode];
+    const best = subjectBest()[mode];
     if (!best) return "—";
     if (typeof best.grade === "number") return `${formatGrade(best.grade)}/10`;
     return best.score != null ? `${best.score}/${best.total || 40}` : "—";
   }
 
+  // Malformed questions are skipped (they never enter the pool), so the bank
+  // still loads. We only treat it as a hard error when nothing is usable.
   function validateData() {
     const problems = [];
-    QUESTIONS.forEach((q, i) => {
-      if (typeof q.tema !== "number") problems.push(`Pregunta ${i + 1}: tema inválido.`);
-      if (!Array.isArray(q.options) || q.options.length !== 4) problems.push(`Pregunta ${i + 1}: no tiene cuatro opciones.`);
-      if (q.trusted === true && !LETTERS.includes(q.correctKey)) problems.push(`Pregunta ${i + 1}: pregunta fiable sin correctKey válido.`);
-    });
+    const usable = QUESTIONS.filter(q => q.trusted === true && correctKeyValid(q));
+    const skipped = QUESTIONS.length - usable.length;
+    if (skipped > 0) console.warn(`Quiz: ${skipped} pregunta(s) ignorada(s) por formato no válido.`);
+    if (!QUESTIONS.length) {
+      problems.push("El banco de preguntas está vacío.");
+    } else if (!usable.length) {
+      problems.push("Ninguna pregunta del banco tiene un formato válido (opciones y respuesta correcta).");
+    }
     const counts = Object.fromEntries(MODES.map(mode => [mode.key, poolForMode(mode.key).length]));
     return { ok: problems.length === 0, problems, counts };
   }
@@ -1338,12 +1602,29 @@ button { font: inherit; }
     `;
   }
 
+  function renderSubjectSwitch() {
+    if (!Array.isArray(SUBJECTS) || SUBJECTS.length < 2) return "";
+    return `
+      <div class="subject-switch" role="tablist" aria-label="Asignatura">
+        ${SUBJECTS.map(subject => `
+          <button class="subject-chip ${subject.key === CURRENT_SUBJECT ? "active" : ""}" data-subject="${escapeHtml(subject.key)}" type="button" role="tab" aria-selected="${subject.key === CURRENT_SUBJECT ? "true" : "false"}">
+            ${subject.icon ? `<span class="subject-emoji" aria-hidden="true">${escapeHtml(subject.icon)}</span>` : ""}
+            <span class="subject-name">${escapeHtml(subject.label || subject.key)}</span>
+          </button>
+        `).join("")}
+      </div>
+    `;
+  }
+
   function renderModeButtons() {
     return `
-      <div class="mode-selector" role="tablist" aria-label="Modo de test">
-        ${MODES.map(mode => `
-          <button class="mode-btn ${state.selectedMode === mode.key ? "active" : ""}" data-mode="${mode.key}" type="button">${escapeHtml(mode.label)}</button>
-        `).join("")}
+      <div class="selector-stack">
+        ${renderSubjectSwitch()}
+        <div class="mode-selector" role="tablist" aria-label="Modo de test">
+          ${MODES.map(mode => `
+            <button class="mode-btn ${state.selectedMode === mode.key ? "active" : ""}" data-mode="${mode.key}" type="button">${escapeHtml(mode.label)}</button>
+          `).join("")}
+        </div>
       </div>
     `;
   }
@@ -1398,7 +1679,7 @@ button { font: inherit; }
             </span>
             <span class="question-text">${escapeHtml(q.question)}</span>
           </div>
-          <div class="answers">${options}</div>
+          <div class="answers" data-count="${q.options.length}">${options}</div>
           ${feedbackHtml}
           ${renderStats()}
           <div class="actions-row">
@@ -1535,6 +1816,11 @@ button { font: inherit; }
       toggleSource(sourceToggle.dataset.sourceToggle);
       return;
     }
+    const subjectButton = event.target.closest("[data-subject]");
+    if (subjectButton) {
+      switchSubject(subjectButton.dataset.subject);
+      return;
+    }
     const modeButton = event.target.closest("[data-mode]");
     if (modeButton) {
       startNewTest(modeButton.dataset.mode);
@@ -1575,7 +1861,7 @@ button { font: inherit; }
     }
   });
 
-  loadBank();
+  init();
 
   </script>
 </body>
