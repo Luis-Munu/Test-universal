@@ -3983,6 +3983,750 @@
           "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         }
       ]
+    },
+    {
+      "key": "procesos",
+      "label": "Procesos y contextos educativos",
+      "icon": "🏫",
+      "questions": [
+        {
+          "question": "¿Qué ley supuso aumentar el tramo de edad de la enseñanza obligatoria hasta los 16 años?",
+          "options": [
+            "Ley Moyano.",
+            "LODE.",
+            "LOGSE.",
+            "LGE."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La enumeración de los descriptores de perfil de salida solemos encontrarla en la legislación...",
+          "options": [
+            "Entre las consideraciones finales del decreto autonómico.",
+            "Entre los primeros artículos del Real Decreto de enseñanzas mínimas.",
+            "En el ANEXO I del Real Decreto de Currículo.",
+            "No se suelen enumerar porque son muchos."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La ESO contribuirá a desarrollar en los alumnos y las alumnas las capacidades que les permitan:",
+          "options": [
+            "Apreciar la creación artística.",
+            "Concebir el conocimiento científico como un saber integrado.",
+            "Todas son correctas.",
+            "Conocer y aceptar el funcionamiento del propio cuerpo."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Incorporaba por primera vez los estándares de aprendizaje entre los elementos curriculares:",
+          "options": [
+            "LOGSE.",
+            "LOPEGCE.",
+            "LODE.",
+            "LOMCE."
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿En qué año se aprobó la LODE?",
+          "options": [
+            "1905.",
+            "2005.",
+            "1995.",
+            "1985."
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Quién podrá diseñar e implementar métodos pedagógicos y didácticos propios?",
+          "options": [
+            "Centros educativos.",
+            "Administraciones educativas.",
+            "Ministerio de Educación, Cultura y Deporte.",
+            "Gobierno."
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de los siguientes es un principio de la LOE?",
+          "options": [
+            "Aparición de las competencias clave.",
+            "Todas son correctas.",
+            "La equidad.",
+            "Educación obligatoria hasta los 14 años."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué ley fue derogada antes de llegar a implantarse en el calendario escolar?",
+          "options": [
+            "LOMCE.",
+            "LOGSE.",
+            "LOCE.",
+            "LOE."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Si hay un concepto que puede describir el sistema educativo español de estas últimas tres décadas, es el de:",
+          "options": [
+            "Educativo.",
+            "Estable.",
+            "Cambiante.",
+            "Diferente."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Dónde suele encontrarse explicitado el currículo estatal?",
+          "options": [
+            "En los decretos curriculares.",
+            "No se suele publicar.",
+            "En el Real Decreto de Currículo o enseñanzas mínimas.",
+            "En la ley vigente."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Las leyes educativas se publican en:",
+          "options": [
+            "Los boletines oficiales autonómicos.",
+            "Todas son correctas.",
+            "El Boletín Oficial del Ministerio de Educación.",
+            "El Boletín Oficial del Estado."
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué nombre reciben en la actualidad, con la LOMLOE, los programas que encaminan a cierto alumnado hacia vías profesionales?",
+          "options": [
+            "Programas de Garantía Social.",
+            "Formación Profesional Inicial.",
+            "Programas de Diversificación Curricular.",
+            "Ciclos Formativos de Grado Básico."
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de los siguientes elementos no es un componente del currículo?",
+          "options": [
+            "Los criterios de evaluación.",
+            "La distribución horaria.",
+            "Las competencias específicas.",
+            "Las competencias clave."
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuántos cursos comprende la Educación Secundaria Obligatoria?",
+          "options": [
+            "Ocho.",
+            "Seis.",
+            "Dos",
+            "Cuatro."
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Se trata de un elemento curricular exclusivo de LOMCE",
+          "options": [
+            "Estándares de aprendizaje",
+            "Criterios de evaluación",
+            "Metodología",
+            "Saberes básicos"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuántas competencias clave como ejes instrumentales se mencionan en la LOMLOE?",
+          "options": [
+            "ONCE",
+            "DIEZ",
+            "SIETE",
+            "OCHO"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Según el desarrollo legislativo de la LOMLOE, los criterios de evaluación están ubicadas dentro de",
+          "options": [
+            "Las situaciones de aprendizaje",
+            "Las competencias específicas",
+            "Los objetivos de etapa",
+            "Las competencias clave"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿En qué año entró en vigor la LOE?",
+          "options": [
+            "1996",
+            "1986",
+            "2006.",
+            "2016"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Con la LOMLOE, promocionará automáticamente el alumnado que... (señala la opción correcta).",
+          "options": [
+            "ya haya repetido una vez el curso sobre el que se realiza la evaluación",
+            "Apruebe todas las materias",
+            "Todas son correctas",
+            "ya haya repetido previamente, en dos ocasiones, a lo largo de su escolarización obligatoria."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "En relación a la materia de Religión (señala la afirmación correcta)",
+          "options": [
+            "La materia de religión será de oferta voluntaria por parte de los centros educativos",
+            "La evaluación de las enseñanzas de religión se realizará en los mismos términos y con los mismos efectos que la de las otras materias",
+            "La materia de religión también computará en la obtención de la nota media a efectos de acceso a otros estudios",
+            "El alumnado que no curse la materia de religión tendrá una materia alternativa, Valores Éticos."
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Tras la aparición de la LOMLOE, los saberes básicos de cada materia de educación secundaria se publican legislativamente en",
+          "options": [
+            "la introducción del real decreto de enseñanzas mínimas",
+            "el anexo II del real decreto de enseñanzas mínimas",
+            "no aparecen en el real decreto porque eso se desarrolla sólo en los decretos autonómicos",
+            "el anexo I del real decreto de enseñanzas mínimas"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Las competencias específicas de cada materia las podemos localizar en el real decreto de enseñanzas mínimas, concretamente en",
+          "options": [
+            "el anexo II",
+            "el anexo III",
+            "la introducción",
+            "el anexo I"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Según el desarrollo legislativo de la LOMLOE, los descriptores operativos están ubicadas dentro de",
+          "options": [
+            "Las situaciones de aprendizaje",
+            "Las competencias clave",
+            "Los objetivos de etapa",
+            "Las competencias específicas"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál es la Ley educativa vigente en la actualidad en España?",
+          "options": [
+            "LOCE",
+            "Todas son correctas",
+            "LOMCE",
+            "LOMLOE"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La COMPETENCIA PLURILINGÜE aparece por primera vez en la:",
+          "options": [
+            "LOGSE",
+            "LOMLOE",
+            "LOMCE",
+            "LOE"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿A partir de qué ley el profesorado debe participar en la elaboración del proyecto educativo y la Programación anual?",
+          "options": [
+            "LOCE",
+            "LOPEG",
+            "LOGSE",
+            "LOMCE"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "En LOMLOE, la relación entre las competencias específicas y los diferentes descriptores operativos se publican en:",
+          "options": [
+            "no aparecen en el real decreto porque eso se desarrolla solo en los decretos autonomicos",
+            "la introducción del real decreto de enseñanzas mínimas",
+            "el anexo II del real decreto de enseñanzas mínimas.",
+            "el anexo I del real decreto de enseñanzas mínimas"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La materia de Eduación en Valores Éticos y Cívicos",
+          "options": [
+            "Se podrá cursar voluntariamente en 4º de ESO",
+            "Se cursará obligatoriamente por todo el alumnado en 1º ESO",
+            "Se cursará obligatoriamente por todo el alumnado en algún curso de la ESO.",
+            "Se cursará de manera voluntaria por el alumnaduo a lo largo de la ESO"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La ley más longeva de la historia de la legislación educativa española es o ha sido:",
+          "options": [
+            "La Ley Orgánica de Educación.",
+            "La Ley Orgánica reguladora del Derecho a la Educación",
+            "La Ley General de Educación",
+            "La Ley de Instrucción Pública"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Tras la aparición de la LOMLOE, los objetivos de etapa se enumeran legislativamente en:",
+          "options": [
+            "No aparece en ell real decreto porque eso se desarrolla sólo en los decretos autonómicos.",
+            "La introducción del real decreto de enseñanzas mínimas.",
+            "El anexo II del real decreto de enseñanzas mínimas.",
+            "El anexo I del real decreto de enseñanzas mínimas"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Regulación de los elementos que determinan los procesos de enseñanza y aprendizaje para cada una de las enseñanzas:",
+          "options": [
+            "Currículum.",
+            "Bloque.",
+            "Competencia.",
+            "Curso escolar"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Con la aparición de la LOMLOE, desaparecen del listado de elementos currículares …",
+          "options": [
+            "Los criterios de evaluación.",
+            "Las competencias clave.",
+            "Los estandares de aprendizaje.",
+            "Los objetivos de etapa."
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Tras la aparición de la LOMLOE, el desglose de las diversas competencias clave en los descriptores operativos se publica legislativamente en",
+          "options": [
+            "el anexo I del real decreto de enseñanzas mínimas",
+            "el anexo II del real decreto de enseñanzas mínimas",
+            "la introducción del real decreto de enseñanzas mínimas",
+            "no aparecen en el real decreto porque eso se desarrolla sólo en los decretos autonómicos"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Versión consolidada de una ley significa:",
+          "options": [
+            "La ley comparada con otras leyes similares",
+            "La ley tal cual fue publicada en su origen",
+            "La ley inicial corregida, con añadidos posteriores o eliminación de algunas partes",
+            "La ley resumida en sus partes esenciales"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Según el desarrollo legislativo de la LOMLOE, las competencias específicas están ubicadas dentro de",
+          "options": [
+            "Las situaciones de aprendizaje",
+            "Los objetivos de etapa",
+            "Cada materia",
+            "Los criterios de evaluación"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Las competencias clave LOMLOE están recogidas legislativamente y enumeradas en",
+          "options": [
+            "En los decretos autonómicos",
+            "El anexo I del real decreto de enseñanzas mínimas",
+            "La introducción del real decreto de enseñanzas mínimas",
+            "Todas son correctas"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Tras la aparición de la LOMLOE, la relación entre las competencias específicas y los diferentes descriptores operativos se publican legislativamente en",
+          "options": [
+            "el anexo II del real decreto de enseñanzas mínimas",
+            "no aparecen en el real decreto porque eso se desarrolla sólo en los decretos autonómicos",
+            "el anexo I del real decreto de enseñanzas mínimas",
+            "la introducción del real decreto de enseñanzas mínimas"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué ley introdujo el concepto de 'descriptores operativos' en el diseño curricular?",
+          "options": [
+            "LOCE",
+            "LOMLOE",
+            "LOE",
+            "LOMCE"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de las siguientes leyes es la que actualmente sigue vigente, aunque con alguna modificación?",
+          "options": [
+            "LOPEGCE",
+            "LODE",
+            "LOGSE",
+            "LOCE"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué ley añadió las competencias como elemento curricular?",
+          "options": [
+            "LOMCE",
+            "LOE",
+            "LOCE",
+            "LOGSE"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Para promocionar de curso, con la LOMLOE... (señala la respuesta correcta)",
+          "options": [
+            "Todas son correctas",
+            "Se puede promocionar con una materia pendiente",
+            "Se puede promocionar con 3 materias pendientes si a juicio del claustro es conveniente",
+            "Se puede promocionar habiendo suspendido Matemáticas y Lengua Castellana"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿En qué año entró en vigor la LOGSE?",
+          "options": [
+            "2001",
+            "1996",
+            "2006",
+            "1990"
+          ],
+          "correct": "D",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de los siguientes es un principio de la LOE?",
+          "options": [
+            "Educación obligatoria hasta los 14 años",
+            "Los itinerarios didácticos",
+            "La igualdad de oportunidades",
+            "Aparición de las competencias clave"
+          ],
+          "correct": "C",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La ESO contribuirá a desarrollar en los alumnos y las alumnas las capacidades que les permitan:",
+          "options": [
+            "Desarrollarse plenamente y armonía",
+            "Apreciar la diversidad intercultural",
+            "Fortalecer por sobre otras áreas un conocimiento científico riguroso",
+            "Lograr un aprendizaje para toda la vida"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de las siguientes leyes de educación propugnaba un modelo de enseñanza constructivista orientado al aprendizaje significativo?",
+          "options": [
+            "LOGSE",
+            "LOMCE",
+            "LOE",
+            "LGE"
+          ],
+          "correct": "A",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Los resultados de aprendizaje son un elemento curricular que está presente en:",
+          "options": [
+            "LOMCE exclusivamente (eso sí, en FP?",
+            "LOMCE y LOMLOE (eso sí, en FP)",
+            "en ninguna de las dos leyes mencionadas",
+            "LOMLOE exclusivamente (eso sí, en FP)"
+          ],
+          "correct": "B",
+          "source": "Test 1 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿En qué momento deben elaborar los centros educativos los PGA?",
+          "options": [
+            "Al final del curso anterior.",
+            "Al principio del curso.",
+            "En las vacaciones de verano.",
+            "A final de curso."
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Documento donde se recogen las funciones acordadas en el centro respecto de la tutoría y las propuestas de intervención en los diferentes ámbitos:",
+          "options": [
+            "Plan de gestión de centro.",
+            "Plan de Acción Tutorial.",
+            "Plan de Atención a la diversidad.",
+            "Plan de Compensación Educativa."
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "El Plan de Acción Tutorial debe contener acciones de:",
+          "options": [
+            "Transmisión de valores.",
+            "Educación para la prevención y resolución de conflictos y no violencia.",
+            "Todas son correctas.",
+            "Medidas para desarrollar la igualdad efectiva entre hombres y mujeres."
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué incluye el Proyecto Educativo?",
+          "options": [
+            "Plan de convivencia.",
+            "Acción tutorial.",
+            "Atención a la diversidad.",
+            "Todas son correctas."
+          ],
+          "correct": "D",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cómo llamamos a aquella figura de gestión en la que los docentes del centro son consultados y oídos en los momentos de toma de decisiones?",
+          "options": [
+            "AMPA.",
+            "Claustro de Profesores.",
+            "Equipo directivo.",
+            "Consejo escolar."
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué tipo de centros son aquellos centros privados que realizan un convenio con la administración pública para concertar de manera legal el servicio que ofertan?",
+          "options": [
+            "Centros públicos.",
+            "Centros privados.",
+            "Centros concertados.",
+            "Centros semiprivados."
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué documento recogerá la ordenación y utilización de los recursos del centro, tanto materiales como humanos?",
+          "options": [
+            "Plan de Acción Tutorial.",
+            "Plan de gestión de centro.",
+            "Plan de Compensación Educativa.",
+            "Plan de Atención a la diversidad."
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Es un documento realizado con el objetivo de contemplar la atención de todo el alumnado de un centro, atendiendo con él a su diversidad y necesidades:",
+          "options": [
+            "Plan de Atención a la Diversidad.",
+            "Memoria Anual de Centro.",
+            "Plan de Acción Tutorial.",
+            "Ninguna es correcta."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "La labor de tutor debe quedar recogida y plasmada también en un documento denominado:",
+          "options": [
+            "Plan de Acción Tutorial.",
+            "PMAR.",
+            "Memoria Anual de Centro.",
+            "Plan de Centro."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuáles son las formas de abordar la acción tutorial con el alumnado?",
+          "options": [
+            "Online o presencial.",
+            "Ninguna es correcta.",
+            "En grupo e individualmente.",
+            "Solo individualmente."
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Los centros privados concertados deberán hacer público su proyecto educativo e incorporarán su carácter propio o:",
+          "options": [
+            "Plan activo.",
+            "Ideario.",
+            "Pronóstico.",
+            "Plan de aula."
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Por quién estará integrada la Comisión de Coordinación Pedagógica?",
+          "options": [
+            "Jefe de estudios.",
+            "Director.",
+            "Coordinadores de ciclo.",
+            "Todas son correctas."
+          ],
+          "correct": "D",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Los documentos fundamentales mediante los cuales los centros articulan su autonomía pedagógica y curricular son:",
+          "options": [
+            "PEC.",
+            "PAD.",
+            "Normas de organización y funcionamiento de los centros.",
+            "Presupuestos propios."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Sistematización y organización de la acción tutorial, dentro de un programa conjunto:",
+          "options": [
+            "PEC.",
+            "PAD.",
+            "PAT.",
+            "PMAR."
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Indique la opción correcta en relación a los centros concertados:",
+          "options": [
+            "El director pedagógico es quien preside el claustro de profesores",
+            "El secretario general del centro siempre preside el claustro de profesores",
+            "Un profesor se puede postular para presidir el claustro, sin necesidad de consenso",
+            "El director titular del centro es el que preside el claustro de profesores"
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "De acuerdo con la legislación vigente los centros tienen cuatro documentos importantes, ¿Cuál de los siguientes no es uno de ellos?",
+          "options": [
+            "Proyecto de Gestión",
+            "Proyecto Educativo",
+            "Proyecto de Actividades Extraescolares",
+            "Programación General Anual"
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "De acuerdo con los enunciados propuestos señala la respuesta que es incorrecta:",
+          "options": [
+            "El Proyecto de Gestión es impulsado desde el Equipo Directivo",
+            "El Proyecto Educativo del Centro es un documento de carácter contingente",
+            "La Memoria Final es un documento de carácter flexible",
+            "La Programación General Anual se elabora cada curso escolar en los primeros meses del curso académico"
+          ],
+          "correct": "B",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de los siguientes perfiles no forma parte del Consejo Escolar?",
+          "options": [
+            "Jefe de estudios",
+            "Director del centro",
+            "Ministerio de Educación de España",
+            "Secretario del centro educativo"
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "Son centros públicos aquellos cuya titularidad recae en:",
+          "options": [
+            "En un consejo directivo del ministerio",
+            "Una persona física o jurídica de carácter privado",
+            "La administración pública",
+            "Centros privados que realizan un convenio con la administración pública para concertar de manera legal el servicio que ofertan"
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Cuál de las siguientes medidas no es propia de Atención a la Diversidad?",
+          "options": [
+            "Los programas de refuerzo",
+            "La integración de materias en ámbitos",
+            "La asignación de tutor/a a cada grupo clase",
+            "El desdoblamiento de grupos"
+          ],
+          "correct": "C",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        },
+        {
+          "question": "¿Qué órgano de coordinación docente no existirá en un Instituto de Educación Secundaria?",
+          "options": [
+            "Equipo de tutores",
+            "Departamento de Orientación",
+            "Departamento de Actividades complementarias y extraescolares",
+            "Diversificación"
+          ],
+          "correct": "D",
+          "source": "Test 2 · Banco CONSOLIDADO"
+        }
+      ]
     }
   ]
 }
