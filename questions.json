@@ -2689,7 +2689,7 @@
     },
     {
       "key": "sociedad",
-      "label": "Sociedad y Familia",
+      "label": "Sociedad, familia y educación",
       "icon": "🏛️",
       "defaultSettings": {
         "questionCount": 40,
@@ -2705,7 +2705,7 @@
             "Controlador"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué se debe analizar en un centro para aplicar correctamente la educación intercultural?",
@@ -2716,7 +2716,7 @@
             "El uniforme escolar"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué factor influye negativamente en el rendimiento escolar según el informe PISA?",
@@ -2727,7 +2727,7 @@
             "El tipo de centro educativo"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué factor del entorno familiar puede dificultar el éxito escolar?",
@@ -2738,7 +2738,7 @@
             "Falta de habilidades sociales y lingüísticas"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué dificultad enfrenta el alumnado inmigrante en el aula?",
@@ -2749,7 +2749,7 @@
             "Desconocimiento del idioma"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Entre las dificultades al afrontar la educación intercultural se encuentra:",
@@ -2760,7 +2760,7 @@
             "Conocimiento del nivel curricular que poseen los grupos minoritarios que puede dejar atrás al grupo aula."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué dimensión del estilo parental se asocia con la aceptación y apoyo al hijo?",
@@ -2771,7 +2771,7 @@
             "Control parental"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué característica presenta la familia de tipo I según Redding?",
@@ -2782,7 +2782,7 @@
             "Elevada formación académica"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué objetivo persigue la utilización de elementos interculturales en el aula?",
@@ -2793,7 +2793,7 @@
             "Separar por niveles culturales"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En 2022 la tasa de natalidad de España era:",
@@ -2804,7 +2804,7 @@
             "La misma que en 1982"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué norma ancestral diferencia etológicamente al Homo sapiens del resto de mamíferos superiores?",
@@ -2815,7 +2815,7 @@
             "La prohibición del incesto."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Los padres son los encargados y poseen la competencia de ejercer:",
@@ -2826,7 +2826,7 @@
             "La socialización primaria de los hijos."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué fenómeno caracteriza a las familias del sur de Europa en cuanto a la permanencia de los hijos en el hogar?",
@@ -2837,7 +2837,7 @@
             "Independencia temprana."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es uno de los principales factores que influyeron en la transformación de la familia tras la Revolución Industrial?",
@@ -2848,7 +2848,7 @@
             "La incorporación masiva al trabajo asalariado."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La familia de tipo III:",
@@ -2859,7 +2859,7 @@
             "Es capaz de regalar tiempo y dinero a sus hijos, pero está muy poco preparada para entender sus necesidades."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es el objetivo último del estilo parental autorizativo según el texto?",
@@ -2870,7 +2870,7 @@
             "Promover la autonomía del hijo."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué característica debe tener la educación intercultural?",
@@ -2881,7 +2881,7 @@
             "Ser aplicada únicamente en centros urbanos."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué factor impide frecuentemente la participación familiar en el centro educativo?",
@@ -2892,7 +2892,7 @@
             "Acceso a recursos digitales."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué aspecto puede limitar la implicación del profesorado con las familias?",
@@ -2903,7 +2903,7 @@
             "tamaño del grupo-clase."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué barrera a la colaboración familia-escuela se menciona en el texto?",
@@ -2914,7 +2914,7 @@
             "Falta de deberes"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué tipos de escuela pública hay básicamente en Europa respecto a titularidad?",
@@ -2925,7 +2925,7 @@
             "La estatal cuya titularidad depende de la Comisión Europea y la local cuya titularidad depende del Estado Nacional."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué metodología favorece un clima de respeto y tolerancia en el aula?",
@@ -2936,7 +2936,7 @@
             "Cooperativa, socioafectiva y comunicativa"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué diferencia fundamental existe entre las escuelas de titularidad estatal y las de titularidad local?",
@@ -2947,7 +2947,7 @@
             "La calidad de los profesores."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué tipo de familia espera que la escuela asuma la mayoría de funciones educativas?",
@@ -2958,7 +2958,7 @@
             "Tipo I"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acción se recomienda para combatir estereotipos sexistas en la educación?",
@@ -2969,7 +2969,7 @@
             "Reforzar los roles tradicionales"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué diferencia a la coeducación de la educación mixta?",
@@ -2980,7 +2980,7 @@
             "La educación mixta separa a niños y niñas en diferentes aulas"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué condición mínima debe existir para que se dé una correcta educación intercultural?",
@@ -2991,7 +2991,7 @@
             "No existencia de relaciones y ausencia de intercambios entre individuos, grupos e instituciones de varias culturas."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué cambio demográfico ha acompañado a la transformación familiar?",
@@ -3002,7 +3002,7 @@
             "Mantenimiento del número de matrimonios"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es una estrategia propuesta para implicar a la familia de tipo III?",
@@ -3013,7 +3013,7 @@
             "Estructurar su interacción con los niños"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la LOMLOE se menciona la obligación de las familias de participar de forma cooperativa en:",
@@ -3024,7 +3024,7 @@
             "Actividades concurso que fomenten el respeto entre las diferentes comunidades educativas."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
@@ -3035,7 +3035,7 @@
             "Realizar actividades de concienciación en coeducación: intervenir en la realización de actividades en contra de la discriminación religiosa y étnica."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál de estos factores define mejor la transformación de la familia en las últimas décadas?",
@@ -3046,7 +3046,7 @@
             "Compartir una hipoteca."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es uno de los pilares fundamentales de la educación intercultural?",
@@ -3057,7 +3057,7 @@
             "Evitar tratar temas culturales en clase"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
@@ -3068,7 +3068,7 @@
             "Castigar a quien utilice expresiones sexistas con sanciones que conozcan sus padres."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué propuesta se menciona para atender la diversidad lingüística en el aula?",
@@ -3079,7 +3079,7 @@
             "Usar solo castellano como lengua vehicular"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La familia además de unidad de supervivencia es un espacio...",
@@ -3090,7 +3090,7 @@
             "De intercambio emocional"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué es el apoyo parental?",
@@ -3101,7 +3101,7 @@
             "La conducta exhibida o manifestada por el padre o la madre hacia su hijo, que hace que el menor se sienta en perpetua vigilancia en su presencia, confirmándose que será castigado."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué problema puede surgir si la escuela ignora la cultura vivencial del alumnado?",
@@ -3112,7 +3112,7 @@
             "Reducción del conflicto en clase"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "También puede limitar u obstaculizar la colaboración eficaz de familia- escuela",
@@ -3123,7 +3123,7 @@
             "Ausencia de actividades extraescolares"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
@@ -3134,7 +3134,7 @@
             "No agrupar por sexos: agrupar potenciando las diferencias religiosas como valor añadido para el grupo."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué estilo educativo parental busca un equilibrio entre exigencia y afecto?",
@@ -3145,7 +3145,7 @@
             "Autorizativo"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Entre las dificultades al afrontar la educación intercultural se encuentra:",
@@ -3156,7 +3156,7 @@
             "El nivel económico medio y su vinculación con el alumnado inmigrante."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué condición mínima debe existir para que se dé una correcta educación intercultural?",
@@ -3167,7 +3167,7 @@
             "Reconocer de manera explícita el derecho de la diferencia entre culturas."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué papel tiene la escuela en la construcción de una sociedad no sexista?",
@@ -3178,7 +3178,7 @@
             "Debe delegar en asociaciones externas"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué hecho histórico marca un cambio en el concepto jurídico de familia?",
@@ -3189,7 +3189,7 @@
             "La aparición del cristianismo."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué representa el conflicto entre Antígona y Creonte?",
@@ -3200,7 +3200,7 @@
             "La rivalidad entre ciudades griegas"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La familia se considera la primera institución cultural porque:",
@@ -3211,7 +3211,7 @@
             "Actúa como primer agente de socialización del ser humano"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué modelo familiar predominó en la organización histórica de sociedades occidentales?",
@@ -3222,7 +3222,7 @@
             "Matriarcal"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué transformación social favoreció una mayor libertad individual en la concepción de la familia?",
@@ -3233,7 +3233,7 @@
             "La Ilustración griega"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué dimensión del estilo parental hace que el menor se sienta aceptado y valorado?",
@@ -3244,7 +3244,7 @@
             "Control parental"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué estilo educativo parental combina comunicación, razonamiento y establecimiento de límites?",
@@ -3255,7 +3255,7 @@
             "Autoritario"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Los hijos educados en un estilo autoritario suelen presentar:",
@@ -3266,7 +3266,7 @@
             "Elevada capacidad de autocontrol"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué caracteriza a las familias de tipo III?",
@@ -3277,7 +3277,7 @@
             "Mantienen una estructura familiar extensa"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué aspecto se destaca como fundamental para mejorar la calidad educativa?",
@@ -3288,7 +3288,7 @@
             "La disminución de tutorías"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál de las siguientes situaciones puede dificultar la colaboración entre familia y escuela?",
@@ -3299,7 +3299,7 @@
             "La participación de las familias en tutorías"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué consecuencias suele tener el estilo autoritario en los hijos según Baumrind?",
@@ -3310,7 +3310,7 @@
             "Alta autoestima y autonomía"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Los diferentes estilos parentales tienen que ver con",
@@ -3321,7 +3321,7 @@
             "las actitudes que surgen a la hora de resolver conflictos."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la Ley Orgánica de Educación (LOE, 2006)",
@@ -3332,7 +3332,7 @@
             "Se desarrolla más que las anteriores la conveniencia del funcionamiento adecuado de asociaciones en las que participan las familias."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Entre las dificultades al afrontar la educación intercultural se encuentra",
@@ -3343,7 +3343,7 @@
             "Una intervención institucional por parte de las familias en los centros."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué es coeducar?",
@@ -3354,7 +3354,7 @@
             "Coeducar es el método de intervención educativo que se asimila a la educación mixta, es decir, sus bases se asientan en la educación de niñas y niños conjuntamente."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El estilo autorizativo suele buscar un equilibrio entre",
@@ -3365,7 +3365,7 @@
             "El estilo autoritario y el indulgente."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El fracaso escolar",
@@ -3376,7 +3376,7 @@
             "Es el hecho de conseguir terminar el ciclo académico obligatorio de un sistema educativo con 2 asignaturas instrumentales."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué otras acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
@@ -3387,7 +3387,7 @@
             "No agrupar por sexos: agrupar potenciando las diferencias étnicas como valor añadido para el grupo."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué efecto tiene una relación conflictiva entre los padres sobre el rendimiento escolar del menor?",
@@ -3398,7 +3398,7 @@
             "Motiva una mejora en el rendimiento."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acontecimiento histórico revoluciona radicalmente el concepto de familia en Occidente?",
@@ -3409,7 +3409,7 @@
             "El descubrimiento de Internet"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "También puede limitar u obstaculizar la colaboración eficaz de familia-escuela",
@@ -3420,7 +3420,7 @@
             "Las diferencias de formación entre profesores y padres"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Desde la escuela, puede existir la percepción de que la participación de las familias puede interferir en los métodos de enseñanza del profesorado, por lo que",
@@ -3431,7 +3431,7 @@
             "Se muestran reticentes a dar un grado de poder a estos"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La competencia parental en la sociedad democrática es",
@@ -3442,7 +3442,7 @@
             "La capacidad de los padres de educar a los hijos en circunstancias adversas"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Resulta imprescindible que las familias consideren al centro escolar como una fuente de ayuda que complementa la formación de sus hijos y no",
@@ -3453,7 +3453,7 @@
             "como algo que comparte sus mismos fines."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La implicación de las familias en el contexto escolar es un asunto de tal importancia que puede emparentarse directamente con",
@@ -3464,7 +3464,7 @@
             "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, la relación entre padres y administración.Final del formulario"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El estilo parental es",
@@ -3475,7 +3475,7 @@
             "es la actitud o la moda con que los padres se distinguen en cada época histórica o lugar.Final del formulario"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la Ley Orgánica de Ordenación General del Sistema Educativo (LOGSE, 1990) se menciona por primera vez",
@@ -3486,7 +3486,7 @@
             "la relevancia de las actividades extraescolares para completar el currículo de los estudiantes."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Entre las características individuales del alumno que pueden derivar en fracaso escolar podemos distinguir 3:",
@@ -3497,7 +3497,7 @@
             "El nivel motivacional del alumno, su falta de rendimiento en las clases de refuerzo y la percepción que tiene del apoyo y la ayuda de sus padres."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En el informe PISA (la Octava edición 2022) de diciembre de 2023 los datos sobre fracaso escolar en España han sido",
@@ -3508,7 +3508,7 @@
             "los peores de la historia."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Desde qué época empieza a descender a su mínima expresión la familia?",
@@ -3519,7 +3519,7 @@
             "El neolítico."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué condición mínima debe existir para que se dé una correcta educación intercultural?",
@@ -3530,7 +3530,7 @@
             "Reconocer la existencia de la demolición cultural."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Entre las dificultades al afrontar la educación intercultural se encuentra",
@@ -3541,7 +3541,7 @@
             "La comprensión o conocimiento del idioma del grupo minoritario en el aula dificulta la comunicación entre los docentes y sus alumnos."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La interculturalidad en el ámbito educativo busca:",
@@ -3552,7 +3552,7 @@
             "lograr una convivencia enriquecedora entre diversos grupos minoritarios dentro del espacio educativo."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La familia de tipo II:",
@@ -3563,7 +3563,7 @@
             "Es capaz de regalar tiempo y dinero a sus hijos, pero está muy poco preparada para entender sus necesidades."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La pedagogía de la desescolarización",
@@ -3574,7 +3574,7 @@
             "Trata de suprimir las instituciones y estructuras y defender una participación sin presiones junto con la abolición de la escolaridad obligatoria y de los diplomas."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Organizar espacios y actividades de manera igualitaria: ofrecer una amplia gama de actividades y materiales para todos los alumnos, sin condicionar los espacios y colores.",
@@ -3585,7 +3585,7 @@
             "Organizar espacios y actividades de manera igualitaria: ofrecer una actividad única y monotemática para todos los alumnos, sin utilizar espacios y colores diversos sino exclusivos."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿La relación entre qué dos factores genera las tipologías de estilos disciplinares.",
@@ -3596,7 +3596,7 @@
             "Permisividad y rigidez"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué condición tiene la representación de padres y alumnos en el consejo escolar? (Test clase Fernando)",
@@ -3607,7 +3607,7 @@
             "Pueden elegir al director del centro"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es una ventaja destacada del aprendizaje online?",
@@ -3618,7 +3618,7 @@
             "Acceso desde cualquier lugar del mundo"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La educación on-line:",
@@ -3629,7 +3629,7 @@
             "Ayuda al estudiante al aprendizaje de las nuevas tecnologías."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la escuela participativa:",
@@ -3640,7 +3640,7 @@
             "Los padres son considerados como un recurso útil para desarrollar el proceso educativo, al mismo nivel que las instituciones."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 1"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La escuela autonomista:",
@@ -3651,7 +3651,7 @@
             "Otorga al alumnado un papel pasivo en el proceso de aprendizaje y gran participación de los padres y de la comunidad."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué corriente sostiene que los valores dependen de la percepción del sujeto?",
@@ -3662,7 +3662,7 @@
             "Empirismo social"
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La personalización del aprendizaje de la educación on line:",
@@ -3673,7 +3673,7 @@
             "Puede mejorar difícilmente la eficacia del aprendizaje al centrarse en las fortalezas y áreas de mejora de cada estudiante."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué desafíos plantea la IA respecto a la evaluación del aprendizaje?",
@@ -3684,7 +3684,7 @@
             "Eliminar la necesidad de seguimiento"
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué acontecimiento aceleró la implantación de la educación online en todo el mundo?",
@@ -3695,7 +3695,7 @@
             "La creación de Google Classroom"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La escuela jerárquica:",
@@ -3706,7 +3706,7 @@
             "Ofrece posibilidades máximas de participación, es consultiva y ejecutiva y para tomar decisiones centrales."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La Ley Moyano (1857):",
@@ -3717,7 +3717,7 @@
             "Estableció por primera vez la gratuidad y obligatoriedad de la enseñanza primaria."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La educación on line ofrece:",
@@ -3728,7 +3728,7 @@
             "flexibilidad en términos de horarios, permitiendo además que los estudiantes adapten sus estudios a sus compromisos familiares y otros."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la Pedagogía tradicional la interacción entre la familia y la escuela:",
@@ -3738,7 +3738,7 @@
             "Exige la participación en las actividades extraescolares de la familia."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Cuál es uno de los retos principales de la escuela común?",
@@ -3749,7 +3749,7 @@
             "Incorporar la diversidad cultural sin generar exclusión"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En pedagogías no directivas la interacción de la familia y la escuela:",
@@ -3760,7 +3760,7 @@
             "La dirección es elegida entre padres y profesores."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "En la escuela comunitaria:",
@@ -3771,7 +3771,7 @@
             "Hay participación de los padres y de las instituciones, pero se considera en menor medida la participación del alumno."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Muchas plataformas en línea fomentan el aprendizaje colaborativo a través de herramientas:",
@@ -3782,7 +3782,7 @@
             "como videos, foros de discusión y evaluaciones on line."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Los programas on line suelen ofrecer:",
@@ -3793,7 +3793,7 @@
             "certificaciones que dificilmente son reconocidas por empleadores y por instituciones académicas tradicionales."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Gracias a la personalización de la educación:",
@@ -3804,7 +3804,7 @@
             "La labor del docente se hace más compleja puesto que debe concretar los contenidos y actividades para cada estudiante."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Una de las principales ventajas del aprendizaje on line:",
@@ -3815,7 +3815,7 @@
             "es la de compatibilizarla con el mundo laboral."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué buscan desarrollar las habilidades del siglo XXI en educación?",
@@ -3826,7 +3826,7 @@
             "Pensamiento crítico, creatividad, colaboración y comunicación"
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La educación on line permite:",
@@ -3837,7 +3837,7 @@
             "difícilmente la adaptación de los materiales de estudio y las evaluaciones según las necesidades individuales de los estudiantes."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La pandemia COVID-19",
@@ -3848,7 +3848,7 @@
             "evidenció la poca importancia de la tecnología en la continuidad de la educación."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La primera protagonista en la gestación social del ciudadano es",
@@ -3859,7 +3859,7 @@
             "la sociedad civil."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El profesorado debe trabajar hacia el establecimiento de",
@@ -3870,7 +3870,7 @@
             "criterios educativos comunes sin dar lecciones ni infravalorar a las familias; ofrecer modelos de relación e intervención con el alumnado que aligeren la dinámica del input y el output."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El objetivismo axiológico",
@@ -3881,7 +3881,7 @@
             "reconoce en los valores un \"ser-conmigo\", ligado de la experiencia individual subjetiva."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La información recopilada durante la evaluación continua:",
@@ -3892,7 +3892,7 @@
             "se utiliza para adaptar y ajustar el las actividades, permitiendo a los educadores ajustarlas las capacidades específicas de los estudiantes."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "¿Qué debe hacer la escuela frente a los distintos modelos familiares?",
@@ -3903,7 +3903,7 @@
             "Ignorar sus características"
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La pedagogía de la desescolarización:",
@@ -3914,7 +3914,7 @@
             "Es la educación tal como la proyectó León Trotsy."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 1 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La inclusividad y diversidad en el ámbito educativo",
@@ -3925,7 +3925,7 @@
             "se centran en la creación de entornos de aprendizaje que comparan, enfrentan y contrastan las diferencias individuales, incluyendo aspectos como la raza, el género, la orientación sexual, la religión, la discapacidad y la diversidad cultural."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "El subjetivismo axiológico",
@@ -3936,7 +3936,7 @@
             "sostiene que los valores cobran significado según cómo sean comunicados por el sujeto que los reconoce."
           ],
           "correct": "B",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La colaboración entre familia y escuela tiene efectos particularmente positivos",
@@ -3947,7 +3947,7 @@
             "en las familias con hijos que presentan problemas en fiscalía de menores."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La implicación de las familias será posible en la medida en que:",
@@ -3958,7 +3958,7 @@
             "en que se pongan en marcha y sean efectivos los canales de comunicación, y se las invita a participar de algún modo general."
           ],
           "correct": "A",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "La socialización busca internalizar valores que conduzcan al individuo",
@@ -3969,7 +3969,7 @@
             "a criticar los intereses de la sociedad receptora, intentando imponer sus intereses personales y sociales, a la vez que delimita su modo de ser y estar en el mundo."
           ],
           "correct": "C",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         },
         {
           "question": "Desde principios del siglo XXI el desarrollo de los medios tecnológicos de la información y el intercambio de datos han revolucionado con una proyección",
@@ -3980,7 +3980,7 @@
             "Mucho mayor que la imprenta."
           ],
           "correct": "D",
-          "source": "Banco de preguntas CONSOLIDADO · Test 2"
+          "source": "Test 2 · Banco de preguntas CONSOLIDADO"
         }
       ]
     }
