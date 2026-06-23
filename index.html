@@ -884,7 +884,7 @@ button { font: inherit; }
   ];
   const DEFAULT_SETTINGS = { questionCount: 40, penaltyEvery: 3 };
   const SETTING_LIMITS = {
-    questionCount: { min: 1, max: 200 },
+    questionCount: { min: 1, max: 9999 },
     penaltyEvery: { min: 1, max: 10 }
   };
 
@@ -943,8 +943,35 @@ button { font: inherit; }
     return clampNumber(state.settings.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery);
   }
 
+  // How many usable (trusted, de-duplicated) questions exist for a given mode.
+  function poolSizeForMode(mode) {
+    return poolForMode(mode).length;
+  }
+
+  // True when the user wants ALL available questions for the current pool —
+  // either explicitly (MAX) or because the saved number meets/exceeds the pool.
+  function isMaxActive(mode = state.selectedMode) {
+    if (state.settings.useMax === true) return true;
+    const pool = poolSizeForMode(mode);
+    return pool > 0 && normalizedQuestionCount() >= pool;
+  }
+
+  // The real test size: capped to what the pool can offer, or the whole pool
+  // when MAX is active. Adapts automatically when the mode/subject changes.
+  function effectiveQuestionCount(mode = state.selectedMode) {
+    const pool = poolSizeForMode(mode);
+    if (pool <= 0) return 0;
+    if (isMaxActive(mode)) return pool;
+    return Math.min(normalizedQuestionCount(), pool);
+  }
+
+  // What the stepper shows: a number, or "MAX" when all questions are used.
+  function questionCountDisplay() {
+    return isMaxActive() ? "MAX" : String(effectiveQuestionCount());
+  }
+
   function currentTestSize() {
-    return state.currentTest.length || normalizedQuestionCount();
+    return state.currentTest.length || effectiveQuestionCount();
   }
 
   function readJSON(key, fallback) {
@@ -961,6 +988,7 @@ button { font: inherit; }
     return {
       questionCount: DEFAULT_SETTINGS.questionCount,
       penaltyEvery: DEFAULT_SETTINGS.penaltyEvery,
+      useMax: false,
       enabledSources: null,
       selectedMode: "general"
     };
@@ -988,6 +1016,7 @@ button { font: inherit; }
     return {
       questionCount: clampNumber(saved.questionCount, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount),
       penaltyEvery: clampNumber(saved.penaltyEvery, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery),
+      useMax: saved.useMax === true,
       enabledSources: Array.isArray(saved.enabledSources) ? saved.enabledSources.slice() : null,
       selectedMode: typeof saved.selectedMode === "string" ? saved.selectedMode : "general"
     };
@@ -1000,6 +1029,7 @@ button { font: inherit; }
       all[CURRENT_SUBJECT] = {
         questionCount: normalizedQuestionCount(),
         penaltyEvery: normalizedPenaltyEvery(),
+        useMax: state.settings.useMax === true,
         enabledSources: Array.isArray(state.settings.enabledSources) ? state.settings.enabledSources.slice() : null,
         selectedMode: state.selectedMode
       };
@@ -1311,11 +1341,12 @@ button { font: inherit; }
   }
 
   function generateTest(mode) {
-    const size = normalizedQuestionCount();
     const pool = poolForMode(mode);
-    if (pool.length < size) {
+    // Size is always capped to the pool, so it can never exceed what's available.
+    const size = Math.min(effectiveQuestionCount(mode), pool.length);
+    if (size < 1) {
       return {
-        error: `No hay suficientes preguntas fiables para ${MODE_LABELS[mode] || mode}. Disponibles: ${pool.length}. Necesarias: ${size}.`
+        error: `No hay preguntas disponibles para ${MODE_LABELS[mode] || mode} con las fuentes activas.`
       };
     }
     const used = state.cycleUsed[mode] || new Set();
@@ -1568,10 +1599,10 @@ button { font: inherit; }
             <div class="settings-label">Nº de preguntas por test</div>
             <div class="stepper">
               <button class="step-btn" data-setting-step="questionCount" data-delta="-1" type="button" aria-label="Reducir preguntas">−</button>
-              <input class="step-input" data-setting-input="questionCount" type="text" pattern="[0-9]*" value="${normalizedQuestionCount()}" inputmode="numeric" autocomplete="off" aria-label="Número de preguntas por test">
+              <input class="step-input" data-setting-input="questionCount" type="text" value="${questionCountDisplay()}" autocomplete="off" aria-label="Número de preguntas por test">
               <button class="step-btn" data-setting-step="questionCount" data-delta="1" type="button" aria-label="Aumentar preguntas">+</button>
             </div>
-            <p class="settings-note">Si un tema no tiene suficientes preguntas, el programa avisará antes de iniciar ese test.</p>
+            <p class="settings-note">El máximo es el nº de preguntas disponibles en el test actual (${poolSizeForMode(state.selectedMode)}). Elige MAX para usar todas; se ajusta solo al cambiar de test o de asignatura.</p>
           </div>
           <div class="settings-item">
             <div class="settings-label">Penalización por pregunta incorrecta</div>
@@ -1777,7 +1808,16 @@ button { font: inherit; }
 
   function changeSetting(name, delta) {
     if (name === "questionCount") {
-      state.settings.questionCount = clampNumber(normalizedQuestionCount() + delta, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
+      // MAX is the top rung of the stepper. Stepping up into (or past) the pool
+      // size selects MAX; stepping down off MAX drops to (pool - 1).
+      const pool = poolSizeForMode(state.selectedMode);
+      const next = effectiveQuestionCount(state.selectedMode) + delta;
+      if (pool > 0 && next >= pool) {
+        state.settings.useMax = true;
+      } else {
+        state.settings.useMax = false;
+        state.settings.questionCount = clampNumber(next, SETTING_LIMITS.questionCount.min, pool > 0 ? pool : SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
+      }
     }
     if (name === "penaltyEvery") {
       state.settings.penaltyEvery = clampNumber(normalizedPenaltyEvery() + delta, SETTING_LIMITS.penaltyEvery.min, SETTING_LIMITS.penaltyEvery.max, DEFAULT_SETTINGS.penaltyEvery);
@@ -1787,7 +1827,19 @@ button { font: inherit; }
   }
 
   function setQuestionCountFromInput(value) {
-    state.settings.questionCount = clampNumber(value, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
+    const pool = poolSizeForMode(state.selectedMode);
+    const str = String(value).trim().toLowerCase();
+    if (str === "max" || str === "máx" || str === "todas") {
+      state.settings.useMax = true;
+    } else {
+      const n = clampNumber(value, SETTING_LIMITS.questionCount.min, SETTING_LIMITS.questionCount.max, DEFAULT_SETTINGS.questionCount);
+      if (pool > 0 && n >= pool) {
+        state.settings.useMax = true;
+      } else {
+        state.settings.useMax = false;
+        state.settings.questionCount = n;
+      }
+    }
     saveSettings();
     render();
   }
