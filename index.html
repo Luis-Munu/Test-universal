@@ -44,7 +44,8 @@ body {
     radial-gradient(circle at 88% 18%, rgba(143, 215, 200, 0.34), transparent 24%),
     radial-gradient(circle at 18% 90%, rgba(163, 196, 255, 0.25), transparent 26%),
     linear-gradient(145deg, var(--bg-1) 0%, var(--bg-2) 52%, var(--bg-3) 100%);
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 body::before,
 body::after {
@@ -76,7 +77,10 @@ button { font: inherit; }
   min-height: 100dvh;
   padding: clamp(16px, 3vw, 30px);
   display: grid;
-  place-items: center;
+  justify-items: center;
+  /* "safe" keeps the card top-aligned (and fully scrollable) when it grows
+     taller than the viewport, while still centering normal-height cards. */
+  align-items: safe center;
 }
 .view {
   width: min(980px, 100%);
@@ -86,7 +90,9 @@ button { font: inherit; }
 }
 .frame {
   width: 100%;
-  max-height: calc(100dvh - 34px);
+  /* No hard height cap: the card grows to fit long questions/answers and the
+     page scrolls. min-height keeps the usual tall, filled look for normal text. */
+  max-height: none;
   min-height: min(760px, calc(100dvh - 34px));
   padding: clamp(18px, 2.4vw, 28px);
   background: var(--surface);
@@ -97,19 +103,22 @@ button { font: inherit; }
   box-shadow: var(--shadow-xl);
   display: grid;
   gap: clamp(12px, 1.8vh, 18px);
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 .frame::before {
   content: "";
   position: absolute;
   inset: 0;
+  border-radius: inherit;
   background: linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0.04));
   pointer-events: none;
 }
 .frame > * { position: relative; z-index: 1; }
 .quiz-frame {
-  grid-template-rows: minmax(120px, 0.9fr) minmax(250px, 1.52fr) auto auto auto auto;
+  /* Content-based minimums (min-content) let the question and answers rows grow
+     to show all text; the fr maximums still fill the card for normal-length text. */
+  grid-template-rows: minmax(min-content, 0.9fr) minmax(min-content, 1.52fr) auto auto auto auto;
 }
 .question-card {
   min-height: clamp(132px, 18vh, 220px);
@@ -219,7 +228,9 @@ button { font: inherit; }
   min-height: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: minmax(96px, 1fr);
+  /* Rows grow to fit the tallest answer (min-content) and otherwise share space
+     evenly (1fr). Both answers in a row stretch to equal height. */
+  grid-auto-rows: minmax(min-content, 1fr);
   gap: clamp(10px, 1.5vh, 14px);
 }
 /* A lone third option spans the full width so the layout stays balanced. */
@@ -228,7 +239,7 @@ button { font: inherit; }
 .answers[data-count="1"] { grid-template-columns: 1fr; }
 .answer {
   min-width: 0;
-  min-height: 0;
+  min-height: 84px;
   border: 1px solid rgba(124, 152, 192, 0.18);
   border-radius: 24px;
   background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(245,248,255,0.92));
@@ -266,8 +277,8 @@ button { font: inherit; }
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.85);
 }
 .answer-text {
-  max-height: 100%;
-  overflow: auto;
+  max-height: none;
+  overflow: visible;
   font-size: clamp(0.97rem, 1.35vw, 1.06rem);
   line-height: 1.36;
   padding-right: 4px;
@@ -574,7 +585,7 @@ button { font: inherit; }
 }
 @media (max-height: 800px) and (min-width: 901px) {
   .frame { max-height: calc(100dvh - 24px); min-height: auto; padding: 16px; }
-  .quiz-frame { grid-template-rows: minmax(96px, 0.76fr) minmax(210px, 1.3fr) auto auto auto auto; }
+  .quiz-frame { grid-template-rows: minmax(min-content, 0.76fr) minmax(min-content, 1.3fr) auto auto auto auto; }
   .question-card { min-height: 120px; }
   .answer-inner { padding: 12px 14px; gap: 12px; }
   .stat-chip { padding: 10px 13px; }
