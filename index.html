@@ -1284,7 +1284,12 @@ button { font: inherit; }
   }
 
   function questionUniqueKey(q) {
-    return q.duplicateGroup || normalizeQuestion(q.question);
+    if (q.duplicateGroup) return q.duplicateGroup;
+    // Key on the stem PLUS its option set so that genuinely different questions
+    // sharing the same stem (different options) are kept as distinct items,
+    // while true repeats (same stem AND same options, even if reordered) collapse.
+    const opts = (q.options || []).map(o => normalizeQuestion(o.text)).sort().join("|");
+    return normalizeQuestion(q.question) + "||" + opts;
   }
 
   function uniqueByQuestionText(questions) {
@@ -1351,6 +1356,19 @@ button { font: inherit; }
     return a;
   }
 
+  // Return a copy of the question with its options randomly reordered and the
+  // letter keys (A, B, C...) reassigned to the new positions. The correct key
+  // is remapped to wherever the correct option landed, so the data can store
+  // options in their original order and the UI still varies it every test.
+  function withShuffledOptions(q) {
+    const order = shuffle(q.options);
+    const correctOld = q.options.find(o => o.key === q.correctKey);
+    const options = order.map((o, k) => ({ key: LETTERS[k] || String(k + 1), text: o.text }));
+    const correctIdx = correctOld ? order.indexOf(correctOld) : -1;
+    const correctKey = correctIdx >= 0 ? options[correctIdx].key : (options[0] ? options[0].key : q.correctKey);
+    return Object.assign({}, q, { options, correctKey });
+  }
+
   function generateTest(mode) {
     const pool = poolForMode(mode);
     // Size is always capped to the pool, so it can never exceed what's available.
@@ -1367,7 +1385,7 @@ button { font: inherit; }
       used.clear();
       available = pool.slice();
     }
-    const selected = shuffle(available).slice(0, size);
+    const selected = shuffle(available).slice(0, size).map(withShuffledOptions);
     for (const q of selected) used.add(questionUniqueKey(q));
     return { questions: selected };
   }
