@@ -2756,7 +2756,7 @@
           "options": [
             "Conocimiento del nivel curricular que poseen los grupos minoritarios que puede retrasar el aprendizaje.",
             "Conocimiento del nivel intelectual que poseen los docentes que puede retrasar el aprendizaje.",
-            "Conocimiento del nivel curricular que poseen los grupos minoritarios que puede dejar atrás al grupo aula.",
+            "Conocimiento del nivel curricular que poseen los grupos minoritarios que puede dejar atrás al grupo aula.2",
             "Conocimiento del nivel curricular que posee el grupo mayoritario que puede retrasar el aprendizaje."
           ],
           "correct": "A",
@@ -2953,7 +2953,7 @@
           "question": "¿Qué tipo de familia espera que la escuela asuma la mayoría de funciones educativas?",
           "options": [
             "Tipo III",
-            "Tipo I",
+            "Tipo I8",
             "Tipo II",
             "Tipo IV"
           ],
@@ -3126,12 +3126,12 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
+          "question": "La autoridad de los padres es necesaria para la educación de los hijos y",
           "options": [
-            "No agrupar por sexos: agrupar potenciando las diferencias personales como valor añadido para el grupo.",
-            "No agrupar por sexos: agrupar potenciando las diferencias religiosas como valor añadido para el grupo.",
-            "No agrupar por sexos: agrupar potenciando las diferencias étnicas como valor añadido para el grupo.",
-            "No agrupar por sexos: agrupar potenciando las diferencias de capacidades intelectuales como valor añadido para el grupo."
+            "se debe adecuar a la necesidad de los hijos y no es unidireccional",
+            "debe imponerse por sí misma a no ser que deje de llamarse autoridad",
+            "aunque no se adecue a la necesidad de los hijos, no es unidireccional",
+            "aunque se adecua a la necesidad de los hijos, es unidireccional"
           ],
           "correct": "A",
           "source": "Test 1 · Banco de preguntas"
@@ -3170,7 +3170,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Según el grupo LISIS, sobre el fomento del Pigmalión positivo, ¿a qué factor se refiere cuando el docente mantiene actitudes de apertura, mostrándose espontáneo y comprensivo? (pág. 32)",
+          "question": "Según el grupo LISIS, sobre el fomento del Pigmalión positivo, ¿a qué factor se refiere cuando el docente mantiene actitudes de apertura, mostrándose espontáneo y comprensivo?",
           "options": [
             "Output.",
             "Input.",
@@ -3426,9 +3426,9 @@
           "question": "También puede limitar u obstaculizar la colaboración eficaz de familia-escuela",
           "options": [
             "La desconfianza, desencanto y/o bajas expectativas del profesorado hacia la familia (y viceversa)",
-            "B) La confianza, esperanza y/o altas expectativas del profesorado hacia la familia (y viceversa)",
-            "C) Las diferencias intergeneracionales entre profesores y padres",
-            "D) Las diferencias de formación entre profesores y padres"
+            "La confianza, esperanza y/o altas expectativas del profesorado hacia la familia (y viceversa)",
+            "Las diferencias intergeneracionales entre profesores y padres",
+            "Las diferencias de formación entre profesores y padres"
           ],
           "correct": "A",
           "source": "Test 1 · Banco de preguntas"
@@ -3472,7 +3472,7 @@
             "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, con el fracaso escolar.",
             "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, con la fluidez burocrática entre familia y escuela.",
             "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, con la disciplina general del entorno educativo.",
-            "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, la relación entre padres y administración.Final del formulario"
+            "el buen funcionamiento del centro, con la buena relación entre alumnos y equipos docentes y, sobre todo, la relación entre padres y administración."
           ],
           "correct": "A",
           "source": "Test 1 · Banco de preguntas"
@@ -3483,7 +3483,7 @@
             "el conjunto de prácticas que utilizan los padres para que sus hijos alcancen los objetivos de la socialización primaria.",
             "el conjunto de prácticas que utilizan los padres para que sus hijos alcancen los objetivos de la socialización secundaria.",
             "el conjunto de prácticas que utilizan los padres para que sus hijos se incorporen sanos al mercado de trabajo.",
-            "es la actitud o la moda con que los padres se distinguen en cada época histórica o lugar.Final del formulario"
+            "es la actitud o la moda con que los padres se distinguen en cada época histórica o lugar."
           ],
           "correct": "A",
           "source": "Test 1 · Banco de preguntas"
@@ -3566,17 +3566,6 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La familia de tipo Il: invierte poco tiempo y energía en el desarrollo de los hijos, además de esperar que sea la escuela la que asuma una mayor responsabilidad en su desarrollo.",
-          "options": [
-            "invierte mucho tiempo y energía en el desarrollo de los hijos, además de esperar que sea la escuela la que asuma",
-            "menor responsabilidad en su desarrollo.",
-            "es capaz de regalar tiempo y dinero a sus hijos, pero está muy poco preparada para entender sus necesidades.",
-            "no es capaz de regalar tiempo y dinero a sus hijos, pero está muy preparada para entender."
-          ],
-          "correct": "A",
-          "source": "Test 1 · Banco de preguntas"
-        },
-        {
           "question": "La pedagogía de la desescolarización",
           "options": [
             "Es la escuela defendida por el Partido Anarquista Americano",
@@ -3588,7 +3577,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Organizar espacios y actividades de manera igualitaria: ofrecer una amplia gama de actividades y materiales para todos los alumnos, sin condicionar los espacios y colores.",
+          "question": "Organizar espacios y actividades de manera igualitaria: ofrecer una amplia gama de actividades y materiales para todos los alumnos, sin condicionar los espacios y colores. - FALTA COPIAR PREGUNTA",
           "options": [
             "Organizar espacios y actividades de manera diferenciada: ofrecer una amplia gama de actividades y materiales para que los alumnos puedan expresar las diferencias con espacios y colores.",
             "Organizar espacios y actividades de manera diversa: ofrecer una amplia gama de actividades y materiales para todos los alumnos, condicionando los espacios y colores en razón de sexos.",
@@ -3621,7 +3610,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La diversidad de las familias en la actualidad es correlativa a (pág.09)",
+          "question": "La diversidad de las familias en la actualidad es correlativa a",
           "options": [
             "La velocidad del cambio en la sociedad de la información y la comunicación.",
             "La diversidad de nuestras sociedades en fragmentación y en continuo movimiento laboral y migratorio.",
@@ -3632,7 +3621,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Una buena relación entre docentes y alumnos debe caracterizarse por cuatro aspectos fundamentales: (pág.27)",
+          "question": "Una buena relación entre docentes y alumnos debe caracterizarse por cuatro aspectos fundamentales:",
           "options": [
             "Transparencia, preocupación por los demás, individualidad, cuando cada uno sabe que es apreciado por el otro y satisfacción de las necesidades mutuas.",
             "Transparencia, preocupación por los demás, creatividad y autoayuda de las necesidades propias.",
@@ -3643,7 +3632,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Los objetivos de la educación de sus hijos son (pág.00)",
+          "question": "Los objetivos de la educación de sus hijos son",
           "options": [
             "Promocionar su autonomía, su salud psíquica y física, y su socialización a cualquier precio, aunque cueste la salud de los padres.",
             "Promocionar su sumisión a la labor del Estado evitando perspectivas particulares para su inclusión en la igualdad.",
@@ -3654,7 +3643,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas? (p.24)",
+          "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas?",
           "options": [
             "Revisar el lenguaje y los materiales que se usan habitualmente, en especial la literatura: adquirir nuevos títulos que perpetúen estereotipos y hacer uso de los clásicos en su acepción original.",
             "Revisar el lenguaje y los materiales que se usan habitualmente, en especial la literatura: adquirir nuevos títulos que rompan estereotipos y hacer uso de los clásicos de manera correcta.",
@@ -3665,7 +3654,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas? (Señala la incorrecta) (pág.24)",
+          "question": "¿Qué acciones podemos llevar a cabo para trabajar la coeducación en nuestras escuelas? (Señala la incorrecta)",
           "options": [
             "Reconocer la existencia de la diversidad cultural.",
             "No agrupar por sexos.",
@@ -3676,7 +3665,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Las familias de tipo I, las similares a la era pre-industrial: (pág. 16)",
+          "question": "Las familias de tipo I, las similares a la era pre-industrial:",
           "options": [
             "Fomentan el desarrollo de sus hijos y consideran que deben participar en el papel educativo de la escuela.",
             "Limitan el desarrollo de sus hijos y consideran que el papel de la escuela es liberar a los niños de sus familias.",
@@ -3687,7 +3676,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La familia tipo I según Redding (1991): (pág. 16)",
+          "question": "La familia tipo I según Redding (1991):",
           "options": [
             "Vive en un nivel de subsistencia, permanece atrapada en las demandas diarias de sus hijos y no cuenta con sus hijos para trabajar.",
             "Es el tipo deseable igualitaria de familia que se quieren alcanzar cuando se obtienen los beneficios de su participación.",
@@ -3698,7 +3687,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Las familias tipo I \"disponible pero alienado\" no tienden a presionar a la escuela, pero sus hijos suelen necesitar (pág 16)",
+          "question": "Las familias tipo I \"disponible pero alienado\" no tienden a presionar a la escuela, pero sus hijos suelen necesitar",
           "options": [
             "Disciplina.",
             "Apoyo.",
@@ -3709,7 +3698,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La ley Orgánica de Calidad de la Educación (LOCE, 2002) incluye (pág. 15)",
+          "question": "La ley Orgánica de Calidad de la Educación (LOCE, 2002) incluye",
           "options": [
             "La participación de los familiares en los órganos de inspección del centro.",
             "La participación de los familiares en el Consejo Escolar, como órgano de gestión y control.",
@@ -3720,7 +3709,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "El menor cuyo progenitor utiliza un estilo autoritario sería: (pág. 11)",
+          "question": "El menor cuyo progenitor utiliza un estilo autoritario sería:",
           "options": [
             "Conflictivo, irritable, descontento y desconfiado.",
             "Impulsivo y agresivo.",
@@ -3731,7 +3720,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Señala los cambios que han influido en la definición de familia en función de las pautas demográficas: (pág. 8)",
+          "question": "Señala los cambios que han influido en la definición de familia en función de las pautas demográficas:",
           "options": [
             "Aumento de la esperanza de vida y descenso de la natalidad.",
             "Se produce una prolongación del \"nido sin usar\" y del \"nido vacío\".",
@@ -3742,7 +3731,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Musitu y García (2004) desarrollan un modelo bidimensional relativo a: (pág. 10)",
+          "question": "Musitu y García (2004) desarrollan un modelo bidimensional relativo a:",
           "options": [
             "La coerción de los padres y su implicación con cuatro estilos parentales.",
             "La coerción de los padres y su implicación con tres estilos parentales.",
@@ -3753,7 +3742,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿De qué tipo de socialización se encarga la familia? (pág.)",
+          "question": "¿De qué tipo de socialización se encarga la familia?",
           "options": [
             "De la socialización primaria de los hijos e hijas.",
             "De la socialización secundaria de los hijos e hijas.",
@@ -3764,7 +3753,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "El control parental: (pág. 10)",
+          "question": "El control parental:",
           "options": [
             "Se relaciona con el grado de esfuerzo que hace el padre o la madre por determinar la conducta de su hijo, esto es, con el grado de control que se pueda alcanzar.",
             "Se relaciona con el grado de laxitud permisividad que tiene el padre o la madre en el trato con su hijo y no tanto con el grado de control que se pueda alcanzar.",
@@ -3775,7 +3764,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Para qué tipo de socialización es necesaria la educación de los padres? (pág.09)",
+          "question": "¿Para qué tipo de socialización es necesaria la educación de los padres?",
           "options": [
             "La educación de los padres es válida en sí misma.",
             "Para la educación terciaria.",
@@ -3786,7 +3775,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "El estilo parental podría definirse como (pág. 10)",
+          "question": "El estilo parental podría definirse como",
           "options": [
             "Una constelación entre actitudes autoritarias hacia su hijo que, consideradas conjuntamente, crean un clima emocional inapropiado en el que se expresan las conductas de sus progenitores o adultos a su cargo.",
             "Una constelación de actitudes hacia su hijo que, consideradas conjuntamente, crean un clima emocional en el que se expresan las conductas de sus progenitores o adultos a su cargo.",
@@ -3797,7 +3786,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Las relaciones intergeneracionales referidas al profesor o profesora (pág.27)",
+          "question": "Las relaciones intergeneracionales referidas al profesor o profesora",
           "options": [
             "Desempeña un doble rol en la relación con su alumnado: por un lado, determina lo que deben aprender sus estudiantes, el contenido del currículo, y organiza las clases, es decir, desempeña el rol de instructor, esto es, debe mantener la disciplina en el aula.",
             "Con su doble rol sobre el cómo y el qué se da en clase, se relaciona con los alumnos como héroe y villano pudiendo hacer tanto bien como mal.",
@@ -3808,7 +3797,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Entre algunas de las características individuales del alumno que pueden derivar en fracaso escolar encontramos (pág. 21)",
+          "question": "Entre algunas de las características individuales del alumno que pueden derivar en fracaso escolar encontramos",
           "options": [
             "La gestión de los centros educativos, la práctica docente, la administración educativa y los métodos de enseñanza de los profesores.",
             "Su esfuerzo, su implicación en su propio proceso de aprendizaje, la cultura, su autosuficiencia, sus actividades y creencias con relación a la enseñanza, problemas de aprendizaje y la relación del alumno con su entorno.",
@@ -3819,7 +3808,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "En el efecto Pigmalión el clima (pág. 32) *",
+          "question": "En el efecto Pigmalión el clima",
           "options": [
             "Se compone de todos los mensajes verbales que emite el docente.",
             "Se compone de todos los mensajes no verbales que emite el docente.",
@@ -3830,7 +3819,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "El proceso de influencia mediante el cual las expectativas del profesorado influyen en el comportamiento del alumnado se conoce como: (pág 28)",
+          "question": "El proceso de influencia mediante el cual las expectativas del profesorado influyen en el comportamiento del alumnado se conoce como:",
           "options": [
             "Efecto Pigmalión.",
             "Efecto camaleón.",
@@ -3841,7 +3830,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué fenómeno se refiere al efecto en el que las expectativas de un docente influyen en el rendimiento del alumnado? (p. 28)",
+          "question": "¿Qué fenómeno se refiere al efecto en el que las expectativas de un docente influyen en el rendimiento del alumnado?",
           "options": [
             "Efecto placebo.",
             "Efecto Halo.",
@@ -3852,7 +3841,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Según el Efecto Pigmalión, ofrecer más información al alumnado del que se espera un mejor rendimiento correspondería a: (p. 32)",
+          "question": "Según el Efecto Pigmalión, ofrecer más información al alumnado del que se espera un mejor rendimiento correspondería a:",
           "options": [
             "Factor Clima del Pigmalión Positivo.",
             "Factor Output del Pigmalión Positivo.",
@@ -3863,7 +3852,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "En la LOMLOE (2020-2023) se menciona la obligación de las familias de participar de forma cooperativa en (pág. 15)",
+          "question": "En la LOMLOE (2020-2023) se menciona la obligación de las familias de participar de forma cooperativa en",
           "options": [
             "Actividades concurso que fomenten el respeto entre las diferentes comunidades educativas.",
             "Proyectos de formación y las tareas que se les propongan desde el centro educativo.",
@@ -3874,7 +3863,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Una buena relación docente-alumnado se caracteriza por (pág 27)",
+          "question": "Una buena relación docente-alumnado se caracteriza por",
           "options": [
             "La individualidad.",
             "La transparencia.",
@@ -3885,7 +3874,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La claridad expositiva del profesorado y el ofertar optativamente son comportamientos (pág 27-28)",
+          "question": "La claridad expositiva del profesorado y el ofertar optativamente son comportamientos",
           "options": [
             "Desmotivadores.",
             "Motivadores.",
@@ -3940,7 +3929,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Cuál de las siguientes opciones no corresponde a una de las dificultades para trabajar la interculturalidad? (25)",
+          "question": "¿Cuál de las siguientes opciones no corresponde a una de las dificultades para trabajar la interculturalidad?",
           "options": [
             "Conocimiento del nivel curricular por parte del alumnado.",
             "Poca intervención de la familia migrante.",
@@ -3973,7 +3962,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Cómo podemos saber la actuación del carácter intercultural? (pág 25)",
+          "question": "¿Cómo podemos saber la actuación del carácter intercultural?",
           "options": [
             "Análisis del contexto.",
             "Promover actividades.",
@@ -3984,7 +3973,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Cambios que influyen en el nuevo concepto de familia (pág 8)",
+          "question": "Cambios que influyen en el nuevo concepto de familia",
           "options": [
             "Cambios en las pautas familiares.",
             "Cambios sociales de alcance global.",
@@ -3995,7 +3984,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Ser profesor implica (pág. 27)",
+          "question": "Ser profesor implica",
           "options": [
             "Una oportunidad de crecer.",
             "Una obligación.",
@@ -4006,7 +3995,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Los estilos parentales autoritarios se correlacionan con hijos de rasgos (pág 11)",
+          "question": "Los estilos parentales autoritarios se correlacionan con hijos de rasgos",
           "options": [
             "Conflictivos pero confiables, descontentos pero agradecidos.",
             "Conflictivos, amables, descontentos y confiados.",
@@ -4017,7 +4006,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Entre las características individuales del alumno que pueden derivar en fracaso escolar encontramos: (señala la incorrecta) (pág. 21)",
+          "question": "Entre las características individuales del alumno que pueden derivar en fracaso escolar encontramos: (señala la incorrecta)",
           "options": [
             "La profesión de los padres.",
             "El nivel de motivación del alumnado.",
@@ -4050,7 +4039,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué institución se responsabiliza de la socialización secundaria? (final pág. 9)",
+          "question": "¿Qué institución se responsabiliza de la socialización secundaria?",
           "options": [
             "El Ministerio.",
             "La Familia.",
@@ -4061,7 +4050,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "En referencia a la crianza de los hijos, la descripción \"una constelación de actitudes hacia su hijo, basadas en puesta de límites y respuestas afectivas o no, que crean un clima emocional en el que se expresan las conductas de sus progenitores o adultos a su cargo\", ¿a qué hace referencia? (pág. 10)",
+          "question": "En referencia a la crianza de los hijos, la descripción \"una constelación de actitudes hacia su hijo, basadas en puesta de límites y respuestas afectivas o no, que crean un clima emocional en el que se expresan las conductas de sus progenitores o adultos a su cargo\", ¿a qué hace referencia?",
           "options": [
             "Constelación familiar.",
             "Estilo parental.",
@@ -4072,7 +4061,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Según el grupo LISIS, sobre el fomento del Pigmalión positivo, ¿a qué factor se refiere cuando el docente ofrece más detalladamente una valoración de los resultados?: (pág.32)",
+          "question": "Según el grupo LISIS, sobre el fomento del Pigmalión positivo, ¿a qué factor se refiere cuando el docente ofrece más detalladamente una valoración de los resultados?:",
           "options": [
             "Clima.",
             "Feedback.",
@@ -4127,7 +4116,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La capacidad de los padres para educar a sus hijos mediante el ejercicio de su rol parental se llama: (pág.)",
+          "question": "La capacidad de los padres para educar a sus hijos mediante el ejercicio de su rol parental se llama:",
           "options": [
             "Competencia parental.",
             "Autoridad parental.",
@@ -4138,7 +4127,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "La socialización primaria corresponde a: (pág.)",
+          "question": "La socialización primaria corresponde a:",
           "options": [
             "La familia extensa.",
             "La familia.",
@@ -4149,7 +4138,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "Dar prioridad en la evaluación a los contenidos procedimentales frente a los conceptuales, por desconexión entre los estilos laborales de los padres y los académicos entre el alumnado de nuevo ingreso o de origen migrante, se entiende como: (pág. 26)",
+          "question": "Dar prioridad en la evaluación a los contenidos procedimentales frente a los conceptuales, por desconexión entre los estilos laborales de los padres y los académicos entre el alumnado de nuevo ingreso o de origen migrante, se entiende como:",
           "options": [
             "Una medida de carácter específico para trabajar la interculturalidad.",
             "Una medida de carácter general para desarrollar una evaluación equitativa.",
@@ -4237,7 +4226,7 @@
           "source": "Test 1 · Banco de preguntas"
         },
         {
-          "question": "¿Qué dos factores generan las tipologías de estilos parentales? (pág. 10)",
+          "question": "¿Qué dos factores generan las tipologías de estilos parentales?",
           "options": [
             "Afecto y autoridad.",
             "Permisividad y rigidez.",
@@ -4245,28 +4234,6 @@
             "Permisividad y coerción."
           ],
           "correct": "C",
-          "source": "Test 1 · Banco de preguntas"
-        },
-        {
-          "question": "La autoridad de los padres es necesaria para la educación de los hijos y",
-          "options": [
-            "se debe adecuar a la necesidad de los hijos y no es unidireccional",
-            "debe imponerse por sí misma a no ser que deje de llamarse autoridad",
-            "aunque no se adecue a la necesidad de los hijos, no es unidireccional",
-            "aunque se adecua a la necesidad de los hijos, es unidireccional"
-          ],
-          "correct": "A",
-          "source": "Test 1 · Banco de preguntas"
-        },
-        {
-          "question": "También puede limitar u obstaculizar la colaboración eficaz de familia-escuela:",
-          "options": [
-            "La falta de formación del profesorado.",
-            "La sobrecualificación del profesorado.",
-            "La ausencia de actividades extraescolares.",
-            "La sobreabundancia de actividades extraescolares."
-          ],
-          "correct": "A",
           "source": "Test 1 · Banco de preguntas"
         },
         {
@@ -4383,9 +4350,9 @@
           "question": "La educación on line ofrece:",
           "options": [
             "flexibilidad en términos de horarios, permitiendo además que los estudiantes adapten sus estudios a sus compromisos familiares y otros.",
-            "flexibilidad muy limitada en términos de horarios, permitiendo difícilmente .que los estudiantes adapten sus estudios a sus compromisos familiares y otros.",
-            "la necesidad de tener muchos conocimientos de las nuevas tecnologías de la información.",
-            "la necesidad de tener apenas conocimientos de las nuevas tecnologías de la información."
+            "flexibilidad muy limitada en términos de horarios, permitiendo difícilmente.que los estudiantes adapten sus estudios a sus compromisos familiares y otros.",
+            "la necesidad de tener muchos conocimientos de las nuevas teconologías de la información.",
+            "la necesidad de tener apenas conocimientos de las nuevas teconologías de la información."
           ],
           "correct": "A",
           "source": "Test 2 · Banco de preguntas"
@@ -4415,7 +4382,7 @@
           "question": "En pedagogías no directivas la interacción de la familia y la escuela:",
           "options": [
             "Se redefinen las relaciones y roles en el proceso educativo, para una “desjerarquización”,",
-            "Los roles están definidos a priori para establecer desde un principio la jerarquía.",
+            "Los roles están definidios a priori para establecer desde un principio la jerarquía.",
             "La dirección es elegida entre alumnos y padres.",
             "La dirección es elegida entre padres y profesores."
           ],
@@ -4448,7 +4415,7 @@
           "question": "Los programas on line suelen ofrecer:",
           "options": [
             "certificaciones que son reconocidas por empleadores y por instituciones académicas tradicionales.",
-            "certificaciones que difícilmente son reconocidas por empleadores y por instituciones académicas tradicionales.",
+            "certificaciones que dificilmente son reconocidas por empleadores y por instituciones académicas tradicionales.",
             "certificaciones oficiales en el ámbito nacional pero no en el internacional.",
             "certificaciones oficiales en el ámbito autonómico pero no en el nacional."
           ],
@@ -4470,7 +4437,7 @@
           "question": "Una de las principales ventajas del aprendizaje on line:",
           "options": [
             "es la capacidad de acceder a la educación desde cualquier lugar del mundo.",
-            "es la capacidad muy limitada de acceder a la educación desde cualquier lugar del mundo",
+            "es la capacidad muy limitida de acceder a la educación desde cualquier lugar del mundo.",
             "es la de compatibilizarla con el aprendizaje presencial.",
             "es la de compatibilizarla con el mundo laboral."
           ],
@@ -4489,7 +4456,7 @@
           "source": "Test 2 · Banco de preguntas"
         },
         {
-          "question": "La educación on-line permite:",
+          "question": "La educación on line permite:",
           "options": [
             "la adaptación de los materiales de estudio y las evaluaciones según las necesidades individuales de los estudiantes.",
             "difícilmente la adaptación de los materiales de estudio y las evaluaciones según las necesidades individuales de los estudiantes.",
@@ -4547,8 +4514,8 @@
           "question": "A partir de los años setenta",
           "options": [
             "La sociedad occidental entró en crisis y con ella sus valores que hasta ahora había creído válidos y universales.",
-            "los valores occientales entraron en un apogeo hasta ahora inéditos.",
-            "La sociedad de consumo entró en un fenómeno de autocomplacencia y expansión universal.",
+            "los valores occientales entreron en un apogeo hasta ahora inéditos.",
+            "La sociedad de consumo entró en un fenómeno de autocomplecencia y expansión universal.",
             "El capitalismo occidental fue adoptado por una sociedad global satisfecha de sí misma con aspitarciones de paz."
           ],
           "correct": "A",
@@ -4654,6 +4621,17 @@
           "source": "Test 2 · Banco de preguntas"
         },
         {
+          "question": "La educación on line",
+          "options": [
+            "amplía las oportunidades educativas para personas en áreas remotas o con limitaciones de movilidad.",
+            "disminuye las oportunidades educativas para personas en áreas remotas o con limitaciones de movilidad.",
+            "solamente ayuda al estudiante al aprendizaje de las nuevas tecnologías.",
+            "ayuda al estudiante a utilizar el metalenguaje."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco de preguntas"
+        },
+        {
           "question": "La educación personalizada les brinda a los estudiantes",
           "options": [
             "la oportunidad de elegir actividades o proyectos que se alineen con sus intereses y metas personales, lo que fomenta la motivación intrínseca.",
@@ -4668,9 +4646,9 @@
           "question": "A partir de los años setenta gracias al reconocimiento y defensa de la diversidad los valores son explicados a partir de dos dimensiones:",
           "options": [
             "Una subjetiva (valores individuales para nuestro desarrollo personal) y otra objetiva (valores sociales para convivir en armonía), que conducen a un determinado comportamiento.",
-            "Una subjetiva (valores supraindividuales para nuestro desarrollo personal) y otra objetiva (valores sociales para convivir en en momentos de dificultad extrema), que conducen a un determinado comportamiento.",
+            "Una subjetiva (valores supraindividuales para nuestro desarrollo personal) y otra objetiva (valores sociales para convivir en en momentos de dificultal extrema), que conducen a un determinado comportamiento.",
             "Una subconsciente (encargada de satisfacer nuestros instintos de sobrevivencia) y otra supraconsciente (encargada de satisfacer nuestros instintos en la jerarquía social), que conducen a un determinado comportamiento del yo consciente.",
-            "Una supraconsciente (encargada de satisfacer nuestros instintos de sobrevivencia) y otra subconsciente (encargada de satisfacer nuestros instintos en la jerarquía social), que conducen a un determina docomportamiento del yo consciente."
+            "Una supraconsciente (encargada de satisfacer nuestros instintos de sobrevivencia) y otra subconsciente (encargada de satisfacer nuestros instintos en la jerarquia social), que conducen a un determinadocomportamiento del yo consciente."
           ],
           "correct": "A",
           "source": "Test 2 · Banco de preguntas"
@@ -4691,7 +4669,7 @@
           "options": [
             "Se amplía hasta el punto de ser inabarcables con nuestra capacidad, pero manejables a través de algoritmos.",
             "Se amplía hasta el punto de ser inabarcables con nuestra capacidad, de manera que la bastedad de la información acaba impidiendo la elegibilidad de los contenidos.",
-            "Se amplía hasta el punto de ser inabarcables con nuestra capacidad, de manera que la bastedad de la información acaba impidiendo la posibilidad de la evaluación ..",
+            "Se amplía hasta el punto de ser inabarcables con nuestra capacidad, de manera que la bastedad de la información acaba impidiendo la posibilidad de la evaluación..",
             "Se amplía hasta el punto de ser inabarcables con nuestra capacidad, de manera que la bastedad de la información acaba impidiendo la elegibilidad de las actividades."
           ],
           "correct": "A",
@@ -4701,8 +4679,8 @@
           "question": "¿Qué es el aprendizaje híbrido?",
           "options": [
             "Es la educación en la que se ponen en combinación enfoques presenciales y on line.",
-            "Es la educación en la que el estudiante puede elegir el enfoque presencial y on line.",
-            "Es la educación on line en la que ocasionalmente hay alguna actividad presencial.",
+            "Es la educación en la que el estudiante puede elegir el enfoque presencial y on line. años",
+            "Es la educacion on line en la que ocasionalmente hay alguna actividad presencial.",
             "Es la educación on line en la que las actividades cooperativas son presenciales."
           ],
           "correct": "A",
@@ -4874,7 +4852,18 @@
           "source": "Test 2 · Banco de preguntas"
         },
         {
-          "question": "En la educación on line los esatudiantes desarrollan las competencias digitales que en la actualidad son tan importantes como",
+          "question": "La diversidad cultural de las familias",
+          "options": [
+            "no es un obstáculo para la participación en la escuela, sino más bien la posibilidad de un enriquecimiento.",
+            "es un obstáculo para la participación en la escuela, sino además la imposibilidad de un enriquecimiento.",
+            "Ha de homogeneizarse a través de los servicios sociales.",
+            "Ha de neutralizarse a través de los medios sociales."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco de preguntas"
+        },
+        {
+          "question": "En la educación on line los estudiantes desarrollan las competencias digitales que en la actualidad son tan importantes como",
           "options": [
             "las habilidades sociales",
             "las habilidades cognitivas.",
@@ -4899,7 +4888,7 @@
           "question": "El apoyo parental: es",
           "options": [
             "La conducta exhibida o manifestada por el padre o la madre hacia su hijo, que hace que el menor se sienta cómodo en su presencia, confirmándole que es aceptado y aprobado como persona.",
-            "La conducta exhibida o manifestada por el padre o la madre hacia su hijo, que hace que el menor se sienta cómodo pero atento en su presencia, confirmándole que es aceptado si se mantiene en alerta.",
+            "La conducta exhibida o manifestada por el padre o la madre hacia su hijo, que hace que el menor se sienta cómodo pero atento en su presencia, confimándole que es aceptado si se mantiene en alerta.",
             "La conducta exhibida o manifestada por el padre o la madre hacia su hijo, que hace que el menor se sienta en perpetua vigilancia en su presencia, confirmándole que será castigado.",
             "La ayuda necesaria que los padres deben recibir a cuenta de deducciones por parte del Ministerio de Hacienda."
           ],
@@ -4913,6 +4902,17 @@
             "Entrevistas comunitarias, reuniones particulares con el equipo docente (inicial, de evaluación, sobre temas puntuales, etc.), tutorías colectivas, cuaderno de comunicación con la familia, boletines e informes, notas informativas y circulares, escuela de familias o encuentros de formación, fiestas, celebraciones o jornadas de puertas abiertas, etc.",
             "Todas las que permitan los medios tecnológicos de la información y la comunicación.",
             "Cualquiera siempre que no sea en horario lectivo."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco de preguntas"
+        },
+        {
+          "question": "¿Cómo deben organizarse los espacios y las actividades para favorecer la coeducación y la igualdad?",
+          "options": [
+            "Organizar espacios y actividades de manera igualitaria: ofrecer una amplia gama de actividades y materiales para todos los alumnos, sin condicionar los espacios y colores.",
+            "Organizar espacios y actividades de manera diferenciada: ofrecer una amplia gama de actividades y materiales para que los alumnos puedan expresar las diferencias con espacios y colores.",
+            "Organizar espacios y actividades de manera igualitaria: ofrecer una actividad única y monotemática para todos los alumnos, sin utilizar espacios y colores diversos sino exclusivos.",
+            "Organizar espacios y actividades de manera diversa: ofrecer una amplia gama de actividades y materiales para todos los alumnos, condicionando los espacios y colores en razón de sexos."
           ],
           "correct": "A",
           "source": "Test 2 · Banco de preguntas"
@@ -4935,6 +4935,17 @@
             "Aunque hay no contactos regulares entre familia y escuela, se integran a los padres en la participación.",
             "Se buscan soluciones unilaterales a los problemas por parte de los docentes.",
             "Se buscan soluciones unilaterales a los problemas por parte de los alumnos."
+          ],
+          "correct": "A",
+          "source": "Test 2 · Banco de preguntas"
+        },
+        {
+          "question": "¿Qué es la mutualidad moral?",
+          "options": [
+            "Es el concepto según el cual familia y escuela deben colaborar para que sus actuaciones en todas las funciones que tienen encomendadas sean complementarias.",
+            "Es el concepto según el cual familia y escuela deben competir para que sus actuaciones en todas las funciones que tienen encomendadas sean mejores unas de otras.",
+            "Es la mutua que acoge a padres y profesores para su salud psíquica.",
+            "Es ámbito de intervención tanto de padres y profesores para compatibilizar escuela y familia."
           ],
           "correct": "A",
           "source": "Test 2 · Banco de preguntas"
